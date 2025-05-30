@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 3
+  tags:
+  - Collectable
+  - CollectEffect
+  - Lava
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - Ground
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Back
+    uniqueID: 3939279443
+    locked: 0
+  - name: Back_1
+    uniqueID: 1449619565
+    locked: 0
+  - name: Back_props
+    uniqueID: 830753949
+    locked: 0
+  - name: Entity
+    uniqueID: 2090004617
+    locked: 0
+  - name: Fore
+    uniqueID: 2295605611
+    locked: 0
+  - name: Plane
+    uniqueID: 1854065811
+    locked: 0
+  m_RenderingLayers:
+  - Default
