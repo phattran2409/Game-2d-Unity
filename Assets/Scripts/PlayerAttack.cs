@@ -11,10 +11,10 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField] private LayerMask enemyLayer;
 
     private Animator anim;
-
     private void Start()
     {
         anim = GetComponent<Animator>();
+      
     }
 
     void Update()
@@ -33,13 +33,13 @@ public class PlayerAttack : MonoBehaviour
 
     void DoDamage()
     {
-        // Tìm tất cả enemy trong phạm vi chém
-        //Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayer);
+        //Tìm tất cả enemy trong phạm vi chém
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayer);
 
-        //foreach (Collider2D enemy in hitEnemies)
-        //{
-        //    enemy.GetComponent<EnemyHealth>()?.TakeDamage(damage);
-        //}
+        foreach (Collider2D enemy in hitEnemies)
+        {
+            enemy.GetComponent<EnemyMovement>()?.TakeDamage(damage);
+        }
     }
 
     private void OnDrawGizmosSelected()

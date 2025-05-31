@@ -33,44 +33,49 @@ public class PlayerController : MonoBehaviour
     private enum PlayerState { idle , run, jumping, land }
     private PlayerState currentState;
 
+    private Health health;
     
     void Start()
     {
         anim = GetComponent<Animator>();
         coll = GetComponent<Collider2D>();
+        health = GetComponent<Health>();    
     }
 
     void Update()
     {
         // Move
-        rb.linearVelocity = new Vector2(horizontal * speed, rb.linearVelocity.y);
-
-        // Ground check
-        bool grounded = IsGrounded();
-
-        // Animation control
-        //anim.SetBool("isJumping", !grounded);
-
-        if (grounded)
+        if (health.Dead == false)
         {
-            anim.SetFloat("Speed", Mathf.Abs(horizontal));
-           
-        }
-        else if (!grounded && rb.linearVelocity.y > 0.1f)
-        {
-            anim.SetBool("isJumping", true);
-        }
-        else
-        {
-            anim.SetBool("isJumping", false);
-        }
+            rb.linearVelocity = new Vector2(horizontal * speed, rb.linearVelocity.y);
 
-        // Flip
-        if (!isFacingRight && horizontal > 0f) Flip();
-        else if (isFacingRight && horizontal < 0f) Flip();
+            // Ground check
+            bool grounded = IsGrounded();
+
+            // Animation control
+            //anim.SetBool("isJumping", !grounded);
+
+            if (grounded)
+            {
+                anim.SetFloat("Speed", Mathf.Abs(horizontal));
+
+            }
+            else if (!grounded && rb.linearVelocity.y > 0.1f)
+            {
+                anim.SetBool("isJumping", true);
+            }
+            else
+            {
+                anim.SetBool("isJumping", false);
+            }
+
+            // Flip
+            if (!isFacingRight && horizontal > 0f) Flip();
+            else if (isFacingRight && horizontal < 0f) Flip();
 
 
-        UpdateState();
+            UpdateState();
+        }
     }
 
     private void UpdateState()
@@ -99,12 +104,15 @@ public class PlayerController : MonoBehaviour
 
     public void Move(InputAction.CallbackContext context)
     {
-        horizontal = context.ReadValue<Vector2>().x;
+        if (health.Dead) return;
 
+        //horizontal = context.ReadValue<Vector2>().x;
+        horizontal = context.ReadValue<Vector2>().x;
     }
 
     public void Jump(InputAction.CallbackContext context)
     {
+        if (health.Dead) return;
         if (context.performed && IsGrounded())
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
@@ -129,7 +137,16 @@ public class PlayerController : MonoBehaviour
         transform.localScale = scale;
     }
 
+    //public void Die()
+    //{
+    //    if (isDead) return;
 
+    //    isDead = true;
+    //    rb.linearVelocity = Vector2.zero; // Stop movement
+    //    anim.SetTrigger("Die"); // Play die animation
+    //    coll.enabled = false; // Disable collider to prevent further collisions
+    //    Debug.Log("Player died");
+    //}   
     // Collision detection for cherries
 
     private void OnTriggerEnter2D(Collider2D other)

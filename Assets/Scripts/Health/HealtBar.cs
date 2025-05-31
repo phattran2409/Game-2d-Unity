@@ -16,7 +16,7 @@ public class HealtBar : MonoBehaviour
     }
     private void Update()
     {
-        Debug.Log("CurrentHealth: " + PlayerHealth.currentHealth);
+        
 
         if (currenthealthBar != null)
             currenthealthBar.fillAmount = PlayerHealth.currentHealth / 10f;

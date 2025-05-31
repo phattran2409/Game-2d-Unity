@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using UnityEngine;
 
 public class Health : MonoBehaviour
@@ -6,11 +6,15 @@ public class Health : MonoBehaviour
     private float startingHealth = 4f;
     public float currentHealth;
     private Animator anim;
-    private bool Dead;
+    public bool Dead = false;
+    
+    private EnemyMovement enemyMovement;
+
     private void Awake()
     {
         currentHealth = startingHealth;
         anim = GetComponent<Animator>();        
+        enemyMovement = GetComponent<EnemyMovement>();
     }
 
     public void TakeDamage(float damage)
@@ -23,26 +27,30 @@ public class Health : MonoBehaviour
         }
         else if (currentHealth <= 0)
         {
-            if (!Dead)
-            {
-                anim.SetTrigger("Die");
-            }   
+            anim.SetTrigger("Die");
+            Die();
             // Player is dead
          
         }
     }
 
- 
+
 
     public void Die()
     {
+    
         Dead = true;
-        currentHealth = 0f; // Ensure health is set to zero on death    
-        // Handle death logic here, e.g., disable the enemy, play death animation, etc.
-        anim.SetTrigger("Die");
+        currentHealth = 0f;
+        
+        // Nếu là enemy:
+        if (enemyMovement != null)
+        {
+            enemyMovement.isChasing = false;
+        }
     }
 
     private void Update()
     {
+       
     }
 }

@@ -5,6 +5,7 @@ public class CameraController : MonoBehaviour
 {
     private Vector3 offset = new Vector3(0f , 0f ,-10f); // Offset from the target position
     public Transform target; // The target to follow 
+    [SerializeField] private float smoothTime = 0.3f; // Time to smooth the camera movement 
     // Start is called once before the first execution of Update after the MonoBehaviour is created 
     private Vector3 velocity = Vector3.zero;
 
@@ -30,7 +31,7 @@ public class CameraController : MonoBehaviour
         if (target == null) return;
 
         Vector3 targetPosition = new Vector3(target.position.x, initialY, initialZ);
-        Vector3 smoothedPosition = Vector3.Lerp(transform.position, targetPosition, 0.125f);
+        Vector3 smoothedPosition = Vector3.SmoothDamp( transform.position, targetPosition, ref velocity ,smoothTime );
 
         transform.position = smoothedPosition;
     }
