@@ -6,10 +6,11 @@ public class Health : MonoBehaviour
     private float startingHealth = 4f;
     public float currentHealth;
     private Animator anim;
-    public bool Dead = false;
-    
     private EnemyMovement enemyMovement;
 
+    private bool Dead = false;
+    public GameObject gameOverPanelPrefab;
+    private GameObject instance;
     private void Awake()
     {
         currentHealth = startingHealth;
@@ -26,11 +27,8 @@ public class Health : MonoBehaviour
              anim.SetTrigger("Hurt");
         }
         else if (currentHealth <= 0)
-        {
-            anim.SetTrigger("Die");
-            Die();
-            // Player is dead
-         
+        {            // Player is dead
+                Die();
         }
     }
 
@@ -40,13 +38,18 @@ public class Health : MonoBehaviour
     {
     
         Dead = true;
-        currentHealth = 0f;
-        
-        // Nếu là enemy:
-        if (enemyMovement != null)
-        {
-            enemyMovement.isChasing = false;
+        currentHealth = 0f; // Ensure health is set to zero on death    
+                            // Handle death logic here, e.g., disable the enemy, play death animation, etc.
+                            anim.SetTrigger("Die");
+                            if (gameOverPanelPrefab == null)
+                            {
+                                 Debug.LogError("GameObject is null in Die method.");   
         }
+        if (gameOverPanelPrefab != null)
+        {
+            instance = Instantiate(gameOverPanelPrefab, FindObjectOfType<Canvas>().transform);
+        }
+       
     }
 
     private void Update()
