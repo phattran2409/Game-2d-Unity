@@ -8,8 +8,11 @@ public class bear : MonoBehaviour
      [SerializeField] private float moveSpeed = 2f;
      [SerializeField] private Transform groundCheck;
      [SerializeField] private LayerMask groundLayer;
-     public Rigidbody2D rb;
+     public int maxHealth = 3;
+     public int currentHealth;
+    public Rigidbody2D rb;
      public float groundCheckDistance = 0.1f;
+     private Animator anim;
     [Header("Chase player")]
     [SerializeField] private Transform player;
 
@@ -17,29 +20,42 @@ public class bear : MonoBehaviour
 
     public EnemyMovement enemyMovement;
 
+    private EnemyAttack enemyAttack;
+
+    private bool isDead = false;    
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private void Awake()
     {
+        enemyAttack = GetComponent<EnemyAttack>();
+        anim = GetComponent<Animator>();    
+    }
+
+        void Start()
+        {
+            currentHealth = maxHealth;
         rb = GetComponent<Rigidbody2D>();
-        health = GetComponent<Health>();
-        enemyMovement = GetComponent<EnemyMovement>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
         enemyMovement.DetectPlayer(player, health);
-
+        if (isDead)
+        {
+            rb.linearVelocity = Vector2.zero;
+        };  
         if (!enemyMovement.isChasing)
         {
+            Debug.Log("Bear is patrolling");   
+            anim.SetTrigger("walk");  // Nếu đã chết thì không thực hiện hành động nào khác   
             rb.linearVelocity = new Vector2(moveSpeed * (enemyMovement.movingRight ? 1 : -1), rb.linearVelocity.y);
             RaycastHit2D groundInfo = Physics2D.Raycast(groundCheck.position, Vector2.down, groundCheckDistance, groundLayer);
-            if (!groundInfo.collider)
+            if (!groundInfo.collider )
             {
                 Flip();
             }
-        }
+        }   
         else
         {
             chasePlayer(player);
@@ -47,14 +63,15 @@ public class bear : MonoBehaviour
     }
 
     public void chasePlayer(Transform player)
-    { 
-       
+    {
+        // Nếu đã chết thì không thực hiện hành động nào khác   
         float direction = Mathf.Sign(player.position.x - transform.position.x);
         rb.linearVelocity = new Vector2(direction * enemyMovement.chaseSpeed, rb.linearVelocity.y);
-
+        
         // Flip sprite nếu cần
         if ((direction > 0 && !enemyMovement.movingRight) || (direction < 0 && enemyMovement.movingRight))
         {
+            
             Flip();
         }
     }
@@ -67,12 +84,47 @@ public class bear : MonoBehaviour
         transform.localScale = scaler;
     }
 
-    //private void OnTriggerEnter2D(Collider2D other)
-    //{ 
-    //    if (other.CompareTag("Player") && enemyMovement.isChasing)
-    //    {
-    //        other.GetComponent<Health>()?.TakeDamage(enemyMovement.damage); // Gọi hàm TakeDamage trên đối tượng Player
-    //        Debug.Log("Bear attacked player! Damage: " + enemyMovement.damage); // In ra thông báo khi tấn công thành công
-    //    }
-    //}
+    public void TakeDamage(int damage)
+    {
+        Debug.Log("Enemy took damage: " + damage);
+        anim.SetTrigger("Hurt");
+        currentHealth -= damage;
+        if (currentHealth <= 0)
+        {
+            isDead = true;      
+            anim.SetTrigger("Dead");
+            Die();
+        }
+    }
+
+    public void Die()
+    {
+        
+        if (isDead)
+        {
+            if (rb == null)
+            {
+                Debug.LogError("Rigidbody2D is null!"); 
+            }
+            rb.linearVelocity = Vector2.zero;
+            Destroy(gameObject, 1f);
+        }
+       
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            if (enemyAttack != null)
+            {
+                enemyAttack.Attack();
+            }
+            else
+            {
+                Debug.LogError("enemyAttack is null!");
+                
+            }
+        }
+    }
 }

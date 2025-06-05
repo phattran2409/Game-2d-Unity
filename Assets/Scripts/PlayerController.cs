@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour
     public Animator anim;
     public Collider2D coll;
     public GameObject collectEffect;
-    
+
 
 
     private float horizontal;
@@ -27,19 +27,19 @@ public class PlayerController : MonoBehaviour
     private bool isJumping;
 
     public TextMeshProUGUI cherryText;
-    
 
-    public int cherries = 0; 
-    private enum PlayerState { idle , run, jumping, land }
+
+    public int cherries = 0;
+    private enum PlayerState { idle, run, jumping, land }
     private PlayerState currentState;
 
     private Health health;
-    
+
     void Start()
     {
         anim = GetComponent<Animator>();
         coll = GetComponent<Collider2D>();
-        health = GetComponent<Health>();    
+        health = GetComponent<Health>();
     }
 
     void Update()
@@ -56,7 +56,7 @@ public class PlayerController : MonoBehaviour
             //anim.SetBool("isJumping", !grounded);
 
             if (grounded)
-            {
+            {   
                 anim.SetFloat("Speed", Mathf.Abs(horizontal));
 
             }
@@ -78,11 +78,18 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    private void FixedUpdate()
+    {
+        if (health.Dead) return;
+
+        rb.linearVelocity = new Vector2(horizontal * speed, rb.linearVelocity.y);
+    }
+
     private void UpdateState()
     {
         bool grounded = IsGrounded();
         float yVelocity = rb.linearVelocity.y;
-        
+
         if (!grounded && yVelocity < -0.1f)
         {
             ChangeState(PlayerState.land);
@@ -107,6 +114,9 @@ public class PlayerController : MonoBehaviour
         if (health.Dead) return;
 
         //horizontal = context.ReadValue<Vector2>().x;
+
+        Debug.Log(horizontal);
+        Debug.Log(context.ReadValue<Vector2>().x);
         horizontal = context.ReadValue<Vector2>().x;
     }
 
@@ -123,7 +133,7 @@ public class PlayerController : MonoBehaviour
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y * 0.5f); // reduce jump height
         }
     }
-    
+
     private bool IsGrounded()
     {
         return Physics2D.OverlapCircle(groundCheck.position, 0.1f, groundLayer);
@@ -155,10 +165,16 @@ public class PlayerController : MonoBehaviour
         {
             Destroy(other.gameObject);
             cherries += 1;
-            cherryText.text = ": "+cherries.ToString(); 
+            cherryText.text = ": " + cherries.ToString();
             Debug.Log("Cherries collected: " + cherries);
         }
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Debug.Log("Player collided with: " + collision.gameObject.name);
+    }
 }
+
 
 

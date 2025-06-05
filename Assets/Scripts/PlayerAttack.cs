@@ -6,7 +6,7 @@ public class PlayerAttack : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
     [SerializeField] private float attackRange;
-    [SerializeField] private int damage;
+    [SerializeField] private int damage = 1;
     [SerializeField] private Transform attackPoint; // vị trí đánh
     [SerializeField] private LayerMask enemyLayer;
 
@@ -14,7 +14,6 @@ public class PlayerAttack : MonoBehaviour
     private void Start()
     {
         anim = GetComponent<Animator>();
-      
     }
 
     void Update()
@@ -35,10 +34,12 @@ public class PlayerAttack : MonoBehaviour
     {
         //Tìm tất cả enemy trong phạm vi chém
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayer);
-
+        Debug.Log("Hit " + hitEnemies.Length + " enemies in range");    
+        if (hitEnemies.Length == 0) Debug.LogError("Not found layer Enemy"); 
+        
         foreach (Collider2D enemy in hitEnemies)
         {
-            enemy.GetComponent<EnemyMovement>()?.TakeDamage(damage);
+            enemy.GetComponent<bear>()?.TakeDamage(damage);   
         }
     }
 
