@@ -8,29 +8,55 @@ public class Health : MonoBehaviour
     private Animator anim;
     private EnemyMovement enemyMovement;
 
-    private bool Dead = false;
+    public bool Dead = false;
     public GameObject gameOverPanelPrefab;
     private GameObject instance;
+
+    private PlayerController playerController;  
     private void Awake()
     {
+        playerController = GetComponent<PlayerController>();
         currentHealth = startingHealth;
         anim = GetComponent<Animator>();        
         enemyMovement = GetComponent<EnemyMovement>();
     }
 
-    public void TakeDamage(float damage)
+    public void TakeDamage(float damage )
     {
         currentHealth = Mathf.Clamp(currentHealth - damage, 0, startingHealth);
         if (currentHealth > 0)
         {
+            if (playerController != null)
+            {
+                playerController.KnockBack(transform.position); // Apply knockback to the player
+            }
             //Player hurt
-             anim.SetTrigger("Hurt");
+            anim.SetTrigger("Hurt");
         }
         else if (currentHealth <= 0)
         {            // Player is dead
                 Die();
         }
     }
+   public void TakeDamage_1(float damage , Vector2 positionGetDamaged )
+    {
+        currentHealth = Mathf.Clamp(currentHealth - damage, 0, startingHealth);
+        if (currentHealth > 0)
+        {
+            if (playerController != null)
+            {
+                playerController.KnockBack(positionGetDamaged); // Apply knockback to the player
+            }
+            //Player hurt
+            anim.SetTrigger("Hurt");
+        }
+        else if (currentHealth <= 0)
+        {            // Player is dead
+                Die();
+        }
+    }
+
+
 
 
 

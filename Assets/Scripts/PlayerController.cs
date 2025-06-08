@@ -20,23 +20,32 @@ public class PlayerController : MonoBehaviour
     public Collider2D coll;
     public GameObject collectEffect;
 
+    [Header("Force Knock")]
+    public float knockBackForce = 10f;
+    public float knockBackUpWard = 2f; 
 
 
     private float horizontal;
     private bool isFacingRight = true;
     private bool isJumping;
 
+    [Header("UI")]
     public TextMeshProUGUI cherryText;
 
 
     public int cherries = 0;
     private enum PlayerState { idle, run, jumping, land }
     private PlayerState currentState;
-
+    private bool grounded = false;  
     private Health health;
 
     void Start()
     {
+        GameObject startPoint = GameObject.FindWithTag("StartCheckpoint");
+        if (startPoint != null)
+        {
+            transform.position = startPoint.transform.position;
+        }
         anim = GetComponent<Animator>();
         coll = GetComponent<Collider2D>();
         health = GetComponent<Health>();
@@ -50,11 +59,11 @@ public class PlayerController : MonoBehaviour
             rb.linearVelocity = new Vector2(horizontal * speed, rb.linearVelocity.y);
 
             // Ground check
-            bool grounded = IsGrounded();
+             grounded = IsGrounded();
 
             // Animation control
-            //anim.SetBool("isJumping", !grounded);
-
+            //anim.SetBool("isJumping", !grounded); 
+            Debug.Log("Grounded: " + grounded); 
             if (grounded)
             {   
                 anim.SetFloat("Speed", Mathf.Abs(horizontal));
@@ -112,14 +121,8 @@ public class PlayerController : MonoBehaviour
     public void Move(InputAction.CallbackContext context)
     {
         if (health.Dead) return;
-
-        //horizontal = context.ReadValue<Vector2>().x;
-
-        Debug.Log(horizontal);
-        Debug.Log(context.ReadValue<Vector2>().x);
         horizontal = context.ReadValue<Vector2>().x;
     }
-
     public void Jump(InputAction.CallbackContext context)
     {
         if (health.Dead) return;
@@ -147,6 +150,17 @@ public class PlayerController : MonoBehaviour
         transform.localScale = scale;
     }
 
+    public void KnockBack(Vector2 acctackerPos)
+    {
+        Vector2 knockbackDirection = (transform.position - (Vector3)acctackerPos).normalized;
+
+        float knockDirectionX = MathF.Sign(knockbackDirection.x);// Ensure knockback force is set correctly  
+        Vector2 force = new Vector2(knockDirectionX ,  knockBackForce) * knockBackUpWard;
+        
+        rb.linearVelocity  = Vector2.zero; // Reset velocity before applying knockback  
+        rb.AddForce(force, ForceMode2D.Impulse); // Apply knockback force   
+    }
+
     //public void Die()
     //{
     //    if (isDead) return;
@@ -172,6 +186,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        grounded = IsGrounded();    
         Debug.Log("Player collided with: " + collision.gameObject.name);
     }
 }
