@@ -45,5 +45,6 @@ public class MenuController : MonoBehaviour
         //pauseMenuInstance = Instantiate(pauseMenuPrefab, transform);
         //pauseMenuInstance.SetActive(false); 
         SceneManager.LoadScene("SampleScene"); 
+
     }
 }

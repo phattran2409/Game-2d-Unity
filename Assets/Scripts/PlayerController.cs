@@ -31,9 +31,10 @@ public class PlayerController : MonoBehaviour
 
     [Header("UI")]
     public TextMeshProUGUI cherryText;
-
+    public TextMeshProUGUI gemText;  
 
     public int cherries = 0;
+    public int gems = 0;    
     private enum PlayerState { idle, run, jumping, land }
     private PlayerState currentState;
     private bool grounded = false;  
@@ -175,12 +176,21 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        Debug.Log("Triggered with: " + other.gameObject.name);
         if (other.CompareTag("Collectable"))
         {
             Destroy(other.gameObject);
             cherries += 1;
             cherryText.text = ": " + cherries.ToString();
             Debug.Log("Cherries collected: " + cherries);
+        } 
+        
+        if (other.CompareTag("Gems"))
+        {
+            Destroy(other.gameObject);
+            gems += 1;
+            gemText.text = ": " + gems.ToString();
+            Debug.Log("Gems collected: " + gems);
         }
     }
 
