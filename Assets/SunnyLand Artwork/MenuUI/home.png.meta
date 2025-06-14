@@ -1,0 +1,205 @@
+fileFormatVersion: 2
+guid: 87f8c43df227619448bed6e81b872b08
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4727443951797864176
+    second: "20250613_1504_Bi\u1EC3u T\u01B0\u1EE3ng Pixel_simple_compose_01jxm51h8pejxrbw075te3myqj_0"
+  - first:
+      213: -5286133846880848127
+    second: "20250613_1504_Bi\u1EC3u T\u01B0\u1EE3ng Pixel_simple_compose_01jxm51h8pejxrbw075te3myqj_1"
+  - first:
+      213: -8161637879871998147
+    second: "20250613_1504_Bi\u1EC3u T\u01B0\u1EE3ng Pixel_simple_compose_01jxm51h8pejxrbw075te3myqj_2"
+  - first:
+      213: -5204602399590315924
+    second: "20250613_1504_Bi\u1EC3u T\u01B0\u1EE3ng Pixel_simple_compose_01jxm51h8pejxrbw075te3myqj_3"
+  - first:
+      213: 1352402092274182207
+    second: "20250613_1504_Bi\u1EC3u T\u01B0\u1EE3ng Pixel_simple_compose_01jxm51h8pejxrbw075te3myqj_4"
+  - first:
+      213: -1252330108618973178
+    second: "20250613_1504_Bi\u1EC3u T\u01B0\u1EE3ng Pixel_simple_compose_01jxm51h8pejxrbw075te3myqj_5"
+  - first:
+      213: 3806299478028447244
+    second: "20250613_1504_Bi\u1EC3u T\u01B0\u1EE3ng Pixel_simple_compose_01jxm51h8pejxrbw075te3myqj_6"
+  - first:
+      213: 6599482637311110821
+    second: "20250613_1504_Bi\u1EC3u T\u01B0\u1EE3ng Pixel_simple_compose_01jxm51h8pejxrbw075te3myqj_7"
+  - first:
+      213: 2817896917210951408
+    second: "20250613_1504_Bi\u1EC3u T\u01B0\u1EE3ng Pixel_simple_compose_01jxm51h8pejxrbw075te3myqj_8"
+  - first:
+      213: -6709866331777682620
+    second: "20250613_1504_Bi\u1EC3u T\u01B0\u1EE3ng Pixel_simple_compose_01jxm51h8pejxrbw075te3myqj_9"
+  - first:
+      213: 3211288707777952308
+    second: "20250613_1504_Bi\u1EC3u T\u01B0\u1EE3ng Pixel_simple_compose_01jxm51h8pejxrbw075te3myqj_10"
+  - first:
+      213: 7192544525580120157
+    second: "20250613_1504_Bi\u1EC3u T\u01B0\u1EE3ng Pixel_simple_compose_01jxm51h8pejxrbw075te3myqj_11"
+  - first:
+      213: 2782227528458981449
+    second: "20250613_1504_Bi\u1EC3u T\u01B0\u1EE3ng Pixel_simple_compose_01jxm51h8pejxrbw075te3myqj_12"
+  - first:
+      213: -3763666518370500732
+    second: "20250613_1504_Bi\u1EC3u T\u01B0\u1EE3ng Pixel_simple_compose_01jxm51h8pejxrbw075te3myqj_13"
+  - first:
+      213: 3836826158463123741
+    second: "20250613_1504_Bi\u1EC3u T\u01B0\u1EE3ng Pixel_simple_compose_01jxm51h8pejxrbw075te3myqj_14"
+  - first:
+      213: 2310725176613729556
+    second: "20250613_1504_Bi\u1EC3u T\u01B0\u1EE3ng Pixel_simple_compose_01jxm51h8pejxrbw075te3myqj_15"
+  - first:
+      213: -3744214506111521332
+    second: "20250613_1504_Bi\u1EC3u T\u01B0\u1EE3ng Pixel_simple_compose_01jxm51h8pejxrbw075te3myqj_16"
+  - first:
+      213: 4143477289193763483
+    second: "20250613_1504_Bi\u1EC3u T\u01B0\u1EE3ng Pixel_simple_compose_01jxm51h8pejxrbw075te3myqj_17"
+  - first:
+      213: -3261753571580481885
+    second: "20250613_1504_Bi\u1EC3u T\u01B0\u1EE3ng Pixel_simple_compose_01jxm51h8pejxrbw075te3myqj_18"
+  - first:
+      213: -2750545846893161965
+    second: "20250613_1504_Bi\u1EC3u T\u01B0\u1EE3ng Pixel_simple_compose_01jxm51h8pejxrbw075te3myqj_19"
+  - first:
+      213: 8189474446794627353
+    second: "20250613_1504_Bi\u1EC3u T\u01B0\u1EE3ng Pixel_simple_compose_01jxm51h8pejxrbw075te3myqj_20"
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 15
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: "20250613_1504_Bi\u1EC3u T\u01B0\u1EE3ng Pixel_simple_compose_01jxm51h8pejxrbw075te3myqj_0"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 632
+        width: 326
+        height: 332
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab5f0743e04dbcb469ec1da96c7da77b
+      internalID: -1868119340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 6f6d0ea66c597eb4bbf94665f24c630c
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":1024.0,"y":1536.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      "20250613_1504_Bi\u1EC3u T\u01B0\u1EE3ng Pixel_simple_compose_01jxm51h8pejxrbw075te3myqj_0": -1868119340
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
