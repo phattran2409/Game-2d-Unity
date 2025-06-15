@@ -4,8 +4,7 @@ using UnityEngine;
 public class EnemyMovement : MonoBehaviour
 {
 
-  
-    private Animator anim;
+    
     public bool movingRight = true;
     public bool isChasing = false;
     public int damage = 1;
@@ -22,7 +21,6 @@ public class EnemyMovement : MonoBehaviour
 
     void Awake()
     {
-        anim = GetComponent<Animator>();
     }   
     void Start()
     {

@@ -57,7 +57,7 @@ public class PlayerController : MonoBehaviour
         // Move
         if (health.Dead == false)
         {
-            rb.linearVelocity = new Vector2(horizontal * speed, rb.linearVelocity.y);
+            //rb.linearVelocity = new Vector2(horizontal * speed, rb.linearVelocity.y);
 
             // Ground check
              grounded = IsGrounded();
@@ -140,7 +140,7 @@ public class PlayerController : MonoBehaviour
 
     private bool IsGrounded()
     {
-        return Physics2D.OverlapCircle(groundCheck.position, 0.1f, groundLayer);
+        return Physics2D.OverlapCircle(groundCheck.position, 0.15f, groundLayer);
     }
 
     private void Flip()
@@ -162,21 +162,9 @@ public class PlayerController : MonoBehaviour
         rb.AddForce(force, ForceMode2D.Impulse); // Apply knockback force   
     }
 
-    //public void Die()
-    //{
-    //    if (isDead) return;
-
-    //    isDead = true;
-    //    rb.linearVelocity = Vector2.zero; // Stop movement
-    //    anim.SetTrigger("Die"); // Play die animation
-    //    coll.enabled = false; // Disable collider to prevent further collisions
-    //    Debug.Log("Player died");
-    //}   
-    // Collision detection for cherries
-
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("Triggered with: " + other.gameObject.name);
+        Debug.Log("Triggered with: " + other.gameObject.name);      
         if (other.CompareTag("Collectable"))
         {
             Destroy(other.gameObject);

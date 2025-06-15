@@ -75,7 +75,14 @@ public class Health : MonoBehaviour
         {
             instance = Instantiate(gameOverPanelPrefab, FindObjectOfType<Canvas>().transform);
         }
-       
+
+        if (gameObject == null)
+        {
+            Debug.LogError("GameObject is null in Die()");
+            return;
+        }
+         
+	    
     }
 
     private void Update()
