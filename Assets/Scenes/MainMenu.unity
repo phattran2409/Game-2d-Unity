@@ -1342,7 +1342,7 @@ GameObject:
   - component: {fileID: 207616178}
   - component: {fileID: 207616177}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Text_Right_key
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2207,8 +2207,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 361, y: 12.461605}
-  m_SizeDelta: {x: 141.5181, y: 2.1442}
+  m_AnchoredPosition: {x: 363.67, y: 16.326}
+  m_SizeDelta: {x: 146.86, y: 1.297}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &264934178
 MonoBehaviour:
@@ -2525,14 +2525,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 332604587}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 10a4bef465075a04eb1611780e8be429, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actionRef: {fileID: 0}
-  bindingName: 
-  keyText: {fileID: 207616177}
+  actionReference: {fileID: -1680190386980627800, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
+  compositePartIndex: 4
+  rebindButton: {fileID: 332604589}
+  bindingText: {fileID: 207616177}
 --- !u!1 &346854316
 GameObject:
   m_ObjectHideFlags: 0
@@ -3105,7 +3106,7 @@ GameObject:
   - component: {fileID: 400941418}
   - component: {fileID: 400941417}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Text_Jump_key
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3127,8 +3128,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 355.8, y: 16.749998}
-  m_SizeDelta: {x: 162.60005, y: -33.5}
+  m_AnchoredPosition: {x: 355.8, y: 12.089}
+  m_SizeDelta: {x: 162.6, y: -42.821}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &400941417
 MonoBehaviour:
@@ -4340,7 +4341,7 @@ GameObject:
   - component: {fileID: 608710652}
   - component: {fileID: 608710651}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Text_Up_key
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5062,7 +5063,7 @@ GameObject:
   - component: {fileID: 772570563}
   - component: {fileID: 772570562}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Text_Left_key
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5276,14 +5277,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 787856504}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 10a4bef465075a04eb1611780e8be429, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actionRef: {fileID: -2099379676528639254, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
-  bindingName: Jump
-  keyText: {fileID: 400941417}
+  actionReference: {fileID: -2099379676528639254, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
+  compositePartIndex: 1
+  rebindButton: {fileID: 787856506}
+  bindingText: {fileID: 400941417}
 --- !u!1 &807504254
 GameObject:
   m_ObjectHideFlags: 0
@@ -8033,14 +8035,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1315314634}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 10a4bef465075a04eb1611780e8be429, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actionRef: {fileID: 1120369429361536294, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
-  bindingName: Attack
-  keyText: {fileID: 52408687}
+  actionReference: {fileID: 1120369429361536294, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
+  compositePartIndex: 2
+  rebindButton: {fileID: 1315314636}
+  bindingText: {fileID: 52408687}
 --- !u!1 &1337975624
 GameObject:
   m_ObjectHideFlags: 0
@@ -8131,14 +8134,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1337975624}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 10a4bef465075a04eb1611780e8be429, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actionRef: {fileID: 0}
-  bindingName: 
-  keyText: {fileID: 772570562}
+  actionReference: {fileID: -1680190386980627800, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
+  compositePartIndex: 3
+  rebindButton: {fileID: 1337975626}
+  bindingText: {fileID: 772570562}
 --- !u!1 &1338872829
 GameObject:
   m_ObjectHideFlags: 0
@@ -9549,14 +9553,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1669814863}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 10a4bef465075a04eb1611780e8be429, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actionRef: {fileID: 0}
-  bindingName: 
-  keyText: {fileID: 608710651}
+  actionReference: {fileID: -1680190386980627800, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
+  compositePartIndex: 1
+  rebindButton: {fileID: 1669814866}
+  bindingText: {fileID: 608710651}
 --- !u!114 &1669814866
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10149,8 +10154,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 361, y: 12.461605}
-  m_SizeDelta: {x: 141.5181, y: 2.1442}
+  m_AnchoredPosition: {x: 362.58, y: 12.439003}
+  m_SizeDelta: {x: 149.042, y: 28.227005}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1772294172
 MonoBehaviour:
@@ -10966,14 +10971,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1880109446}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 10a4bef465075a04eb1611780e8be429, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actionRef: {fileID: 0}
-  bindingName: 
-  keyText: {fileID: 1906276701}
+  actionReference: {fileID: -1680190386980627800, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
+  compositePartIndex: 2
+  rebindButton: {fileID: 1880109448}
+  bindingText: {fileID: 1906276701}
 --- !u!1 &1886793319
 GameObject:
   m_ObjectHideFlags: 0
@@ -11151,7 +11157,7 @@ GameObject:
   - component: {fileID: 1906276702}
   - component: {fileID: 1906276701}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Text_Down_key
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
