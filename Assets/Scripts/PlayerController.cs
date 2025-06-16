@@ -40,6 +40,10 @@ public class PlayerController : MonoBehaviour
     private bool grounded = false;  
     private Health health;
 
+    [Header("Audio")]
+    public AudioClip jumpSound;
+    private AudioSource audioSource;
+
     void Start()
     {
         GameObject startPoint = GameObject.FindWithTag("StartCheckpoint");
@@ -50,6 +54,7 @@ public class PlayerController : MonoBehaviour
         anim = GetComponent<Animator>();
         coll = GetComponent<Collider2D>();
         health = GetComponent<Health>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -130,6 +135,16 @@ public class PlayerController : MonoBehaviour
         if (context.performed && IsGrounded())
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+
+            if (jumpSound != null && audioSource != null)
+            {
+                Debug.Log("Jump sound played"); 
+                audioSource.PlayOneShot(jumpSound);
+            }
+            else
+            {
+                Debug.LogWarning("AudioSource or JumpSound is NULL");
+            }
         }
 
         if (context.canceled && rb.linearVelocity.y > 0f)

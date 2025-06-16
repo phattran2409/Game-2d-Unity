@@ -10,6 +10,7 @@ TagManager:
   - StartCheckpoint
   - Gems
   - CheckPoint_End
+  - Audio
   layers:
   - Default
   - TransparentFX
