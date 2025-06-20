@@ -12,81 +12,91 @@ public class Health : MonoBehaviour
     public GameObject gameOverPanelPrefab;
     private GameObject instance;
 
-    private PlayerController playerController;  
+    private PlayerController playerController;
+
+    [Header("Audio")]
+    public AudioClip hurtSound;
+    public AudioClip gameOverSound;
+
     private void Awake()
     {
         playerController = GetComponent<PlayerController>();
         currentHealth = startingHealth;
-        anim = GetComponent<Animator>();        
+        anim = GetComponent<Animator>();
         enemyMovement = GetComponent<EnemyMovement>();
     }
 
-    public void TakeDamage(float damage )
+    public void TakeDamage(float damage)
     {
+        if (Dead) return; // ✅ Ngăn gọi lại khi đã chết
+
         currentHealth = Mathf.Clamp(currentHealth - damage, 0, startingHealth);
         if (currentHealth > 0)
         {
             if (playerController != null)
             {
-                playerController.KnockBack(transform.position); // Apply knockback to the player
+                playerController.KnockBack(transform.position);
+
+                if (hurtSound != null && playerController.SfxAudioSource != null)
+                {
+                    playerController.SfxAudioSource.PlayOneShot(hurtSound);
+                }
             }
-            //Player hurt
+
             anim.SetTrigger("Hurt");
         }
-        else if (currentHealth <= 0)
-        {            // Player is dead
-                Die();
+        else
+        {
+            Die();
         }
     }
-   public void TakeDamage_1(float damage , Vector2 positionGetDamaged )
+
+    public void TakeDamage_1(float damage, Vector2 positionGetDamaged)
     {
+        if (Dead) return; // ✅ Ngăn gọi lại khi đã chết
+
         currentHealth = Mathf.Clamp(currentHealth - damage, 0, startingHealth);
         if (currentHealth > 0)
         {
             if (playerController != null)
             {
-                playerController.KnockBack(positionGetDamaged); // Apply knockback to the player
+                playerController.KnockBack(positionGetDamaged);
+
+                if (hurtSound != null && playerController.SfxAudioSource != null)
+                {
+                    playerController.SfxAudioSource.PlayOneShot(hurtSound);
+                }
             }
-            //Player hurt
+
             anim.SetTrigger("Hurt");
         }
-        else if (currentHealth <= 0)
-        {            // Player is dead
-                Die();
+        else
+        {
+            Die();
         }
     }
-
-
-
-
 
     public void Die()
     {
-    
+        if (Dead) return; // ✅ Phòng trường hợp bị gọi lại
+
         Dead = true;
-        currentHealth = 0f; // Ensure health is set to zero on death    
-                            // Handle death logic here, e.g., disable the enemy, play death animation, etc.
-                            anim.SetTrigger("Die");
-                            if (gameOverPanelPrefab == null)
-                            {
-                                 Debug.LogError("GameObject is null in Die method.");   
+        currentHealth = 0f;
+        anim.SetTrigger("Die");
+
+        if (gameOverSound != null && playerController != null && playerController.SfxAudioSource != null)
+        {
+            playerController.SfxAudioSource.PlayOneShot(gameOverSound);
         }
+
+        if (gameOverPanelPrefab == null)
+        {
+            Debug.LogError("GameOver panel prefab is missing");
+        }
+
         if (gameOverPanelPrefab != null)
         {
             instance = Instantiate(gameOverPanelPrefab, FindObjectOfType<Canvas>().transform);
         }
-
-        if (gameObject == null)
-        {
-            Debug.LogError("GameObject is null in Die()");
-            return;
-        }
-         
-	    
-    }
-
-    private void Update()
-    {
-       
     }
 }
