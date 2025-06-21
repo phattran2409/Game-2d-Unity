@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
-using TMPro; 
+using TMPro;
+using Unity.VisualScripting;
 
 public class KeyRebinder : MonoBehaviour
 {
@@ -22,7 +23,11 @@ public class KeyRebinder : MonoBehaviour
 	void Start()
 	{
 		action = actionReference.action;
-
+		string rebinds = PlayerPrefs.GetString("Rebinds", "");
+		if (!string.IsNullOrEmpty(rebinds))
+		{
+			action.actionMap.asset.LoadBindingOverridesFromJson(rebinds);
+		}
 		// Tìm composite 2D Vector đầu tiên
 		int compositeIndex = action.bindings.IndexOf(b => b.isComposite && b.name == "2D Vector");
 		Debug.Log($"Composite Index: {compositeIndex}");	
@@ -57,7 +62,8 @@ public class KeyRebinder : MonoBehaviour
 				InputControlPath.HumanReadableStringOptions.UseShortNames
 			);
 			text = text.Replace("[Keyboard]", "").Replace("[Mouse]" , ""); // Loại bỏ "Keyboard/" nếu có
-			bindingText.text = text;	 
+			bindingText.text = text;
+			bindingText.fontSize = 24; // Đặt kích thước chữ nhỏ hơn nếu cần	
 		}
 	}
 
@@ -79,6 +85,8 @@ public class KeyRebinder : MonoBehaviour
 			{
 				operation.Dispose();
 				rebindButton.interactable = true;
+				PlayerPrefs.SetString("Rebinds", action.actionMap.asset.SaveBindingOverridesAsJson());
+				PlayerPrefs.Save();
 				UpdateBindingDisplay();
 			})
 			.OnCancel(operation =>
@@ -86,6 +94,7 @@ public class KeyRebinder : MonoBehaviour
 				operation.Dispose();
 				rebindButton.interactable = true;
 				UpdateBindingDisplay();
+				
 			})
 			.Start();
 	}

@@ -7,7 +7,7 @@ using UnityEngine.Rendering;
 using UnityEngine.Rendering.UI;
 using UnityEngine.UIElements;
 
-public class Slimer : MonoBehaviour, IDamageable , IKnockbackable
+public class Slimer : Enemies , IDamageable 
 {
 	// Start is called once before the first execution of Update after the MonoBehaviour is created
 	[Header("Point Move")]
@@ -44,7 +44,8 @@ public class Slimer : MonoBehaviour, IDamageable , IKnockbackable
 	[Header("Rigid body")]
 	private Rigidbody2D rb; // Rigid body của Slimer	
 
-	private bool isKnockbacking = false; // Biến để theo dõi trạng thái knockback	
+	private bool isKnockbacking = false; // Biến để theo dõi trạng thái knockback
+
 	void Start()
 	{
 		currentHealth = maxHealth; // Khởi tạo sức khỏe hiện tại bằng sức khỏe tối đa	
@@ -74,8 +75,6 @@ public class Slimer : MonoBehaviour, IDamageable , IKnockbackable
 			Attack();
 			attackTimer = enemies.attackCooldown;
 		}
-
-
 
 	}	
 
@@ -119,12 +118,19 @@ public class Slimer : MonoBehaviour, IDamageable , IKnockbackable
 	public void TakeDamage(float damage)
 	{	
 		currentHealth -= damage;// Giảm sức khỏe của Slimer	
-		if (currentHealth  <= 0f)
+        float xDir = transform.position.x - player.position.x;
+        Vector2 knockbackDir = new Vector2(Mathf.Sign(xDir), 0);
+        float knockbackDistance = 1f;
+        float knockbackDuration = 0.2f;
+        StartCoroutine(KnockBackThenResume(knockbackDir, knockbackDistance, knockbackDuration,target , pointA , pointB));
+
+        if (currentHealth  <= 0f)
 		{
 			isDead = true;
 			anim.SetTrigger("isDead"); // Gọi animation chết	
 			Destroy(gameObject , 1f);
 		}
+            
 	}
 
 	public void KnockBack(Vector2 direction, float force)
@@ -139,34 +145,36 @@ public class Slimer : MonoBehaviour, IDamageable , IKnockbackable
 	}
 
 
-	private IEnumerator KnockBackThenResume(Vector2 direction, float distance, float duration)
-	{
-		Vector3 originalTarget = target; // lưu lại hướng ban đầu
-		isKnockbacking = true;
+	//private IEnumerator KnockBackThenResume(Vector2 direction, float distance, float duration)
+	//{
+	//	Vector3 originalTarget = target; // lưu lại hướng ban đầu
+	//	isKnockbacking = true;
 
-		Vector3 startPos = transform.position;
-		Vector3 endPos = startPos + (Vector3)(direction * distance);
-		float elapsed = 0f;
+	//	Vector3 startPos = transform.position;
+	//	Vector3 endPos = startPos + (Vector3)(direction * distance);
+	//	float elapsed = 0f;
 
-		while (elapsed < duration)
-		{
-			transform.position = Vector3.Lerp(startPos, endPos, elapsed / duration);
-			elapsed += Time.deltaTime;
-			yield return null;
-		}
+	//	while (elapsed < duration)
+	//	{
+	//		transform.position = Vector3.Lerp(startPos, endPos, elapsed / duration);
+	//		elapsed += Time.deltaTime;
+	//		yield return null;
+	//	}
 
-		transform.position = endPos;
+	//	transform.position = endPos;
 
-		// Sau khi knockback xong, reset lại target move
-		target = GetNearestPatrolPoint().position;
-		isKnockbacking = false;
-	}
+	//	// Sau khi knockback xong, reset lại target move
+	//	target = GetNearestPatrolPoint().position;
+	//	isKnockbacking = false;
+	//}
 
-	private Transform GetNearestPatrolPoint()
-	{
-		float distA = Vector2.Distance(transform.position, pointA.position);
-		float distB = Vector2.Distance(transform.position, pointB.position);
+	//private Transform GetNearestPatrolPoint()
+	//{
+	//	float distA = Vector2.Distance(transform.position, pointA.position);
+	//	float distB = Vector2.Distance(transform.position, pointB.position);
 
-		return distA < distB ? pointA : pointB;
-	}
+	//	return distA < distB ? pointA : pointB;
+	//}
+
+
 }

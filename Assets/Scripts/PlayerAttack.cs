@@ -12,22 +12,29 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField] private float  damage = 1f;
     [SerializeField] private Transform attackPoint; // vị trí đánh
     [SerializeField] private LayerMask enemyLayer;
-    [SerializeField] private float knockbackForce = 2f; // Lực đẩy khi đánh trúng
-	private Animator anim;
+    [SerializeField] public  GameObject AttackPrefab;
+    private Animator anim;
+    private PlayerController player; 
     private void Start()
     {
         anim = GetComponent<Animator>();
+        player = GetComponent<PlayerController>();  
     }
 
     void Update()
     {
+        
     }
 
     public void OnAttack(InputAction.CallbackContext context)
     {
-        if (context.performed)
+        
+        if (context.performed && player.attackTimer <= 0)
         {
+            player.attackTimer = player.attackCooldown; 
+            Quaternion rotation = transform.rotation;
             anim.SetTrigger("attack");
+            Instantiate(AttackPrefab, attackPoint.position, rotation);
             Invoke(nameof(DoDamage), 0.2f);
         }
     }
@@ -52,11 +59,7 @@ public class PlayerAttack : MonoBehaviour
 			{
 				Debug.LogWarning("Collider does not implement IDamageable: " + col.name);
 			}
-	        IKnockbackable  kb = col.GetComponent<IKnockbackable>();
-	        if (kb != null)
-	        {
-		        kb.KnockBack((col.transform.position - attackPoint.position).normalized, knockbackForce);
-			}
+	       
 
 			// Nếu bạn muốn gọi các phương thức cụ thể của từng loại enemy, bạn có thể sử dụng: 
 			//enemy.GetComponent<bear>()?.TakeDamage(damage); // Kiểm tra nếu có component bear   

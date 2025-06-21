@@ -20,6 +20,16 @@ public class Health : MonoBehaviour
         anim = GetComponent<Animator>();        
         enemyMovement = GetComponent<EnemyMovement>();
     }
+    
+    public void IncreaseHealth(float amount)
+    {
+
+        currentHealth = Mathf.Clamp(currentHealth + amount, 0, startingHealth);
+        if (currentHealth > 0 && anim != null)
+        {
+            anim.SetTrigger("Heal");
+        }
+    }
 
     public void TakeDamage(float damage )
     {
@@ -55,9 +65,6 @@ public class Health : MonoBehaviour
                 Die();
         }
     }
-
-
-
 
 
     public void Die()

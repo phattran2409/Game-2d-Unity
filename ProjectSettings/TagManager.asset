@@ -10,6 +10,7 @@ TagManager:
   - StartCheckpoint
   - Gems
   - CheckPoint_End
+  - Heart
   layers:
   - Default
   - TransparentFX
@@ -64,6 +65,9 @@ TagManager:
     locked: 0
   - name: Plane
     uniqueID: 1854065811
+    locked: 0
+  - name: effectPlayer
+    uniqueID: 331381149
     locked: 0
   m_RenderingLayers:
   - Default

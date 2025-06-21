@@ -3,7 +3,7 @@ using Assets.Scripts;
 using JetBrains.Annotations;
 using UnityEngine;
 
-public class EnemyBatController : MonoBehaviour , IDamageable
+public class EnemyBatController : Enemies , IDamageable
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public Transform pointA;
@@ -11,6 +11,7 @@ public class EnemyBatController : MonoBehaviour , IDamageable
     public float speed = 2f;
     public float frequency = 2f;  // Tần số sóng (lượn nhanh hay chậm)
     public float amplitude = 0.5f; // Biên độ sóng (cao/thấp bao nhiêu)
+    private Vector3 target; 
 
     private Vector2 direction;
     private float moveDistance;
@@ -25,17 +26,19 @@ public class EnemyBatController : MonoBehaviour , IDamageable
     public GameObject attackEffectPrefab;
     public float attackRange = 2f;
 
-    private bool hasAttacked = false;
+    //private bool hasAttacked = false;
     public Transform attackPos;
     
     private Health health;  
     private float damage = 1f;
 
-	
+    private float  attackerTimer = 0f; 
+
     private Animator anim;
     [Header("Health Bat")]
     public float healthBat = 3f; // Sức khỏe của Bat 
-    private float curentHealth =0; 
+    private float curentHealth =0;
+    public Enemies enemies; 
     void Start()
     {   
         curentHealth = healthBat; // Khởi tạo sức khỏe hiện tại bằng sức khỏe tối đa    
@@ -46,7 +49,8 @@ public class EnemyBatController : MonoBehaviour , IDamageable
 	    health = player.GetComponent<Health>(); // Lấy component Health từ Player
 	    anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>(); // Lấy Rigidbody2D để xử lý knockback 
-	}
+        target = pointA.position; // Khởi tạo điểm mục tiêu ban đầu
+    }
 
     void Update()
     {
@@ -71,14 +75,21 @@ public class EnemyBatController : MonoBehaviour , IDamageable
         else if (deltaX < -0.01f)
             spriteRenderer.flipX = true;  // bay sang trái
 
-        float distance = Vector2.Distance(transform.position, player.position);
-        if (distance < attackRange && !hasAttacked && health.Dead == false)
+        //float distance = Vector2.Distance(transform.position, player.position);
+        //if (distance < attackRange && !hasAttacked && health.Dead == false)
+        //{
+        //    Attack();   
+        //    hasAttacked = true;
+        //    Invoke(nameof(ResetAttack), 2f); // Thời gian hồi
+        //}
+        attackerTimer -= Time.deltaTime;    
+        if (DetectPlayer() && attackerTimer <= 0)
         {
-            Attack();   
-            hasAttacked = true;
-            Invoke(nameof(ResetAttack), 2f); // Thời gian hồi
+            Attack();
+            //hasAttacked = true; // Đánh dấu đã tấn công
+            attackerTimer = enemies.attackCooldown; // Đặt lại thời gian tấn công
         }
-        
+
         transform.position = finalPos;
     }
 
@@ -95,15 +106,22 @@ public class EnemyBatController : MonoBehaviour , IDamageable
         health.TakeDamage(damage ); // Gọi hàm TakeDamage từ Health component    
         Instantiate(attackEffectPrefab, attackPos.position, rotation);
     }
+     bool DetectPlayer()
+    {
+        return enemies.DetectPlayer(player, transform, attackRange, isDead); 
 
-   public void TakeDamage(float damage)
+    }
+    public void TakeDamage(float damage)
     { 
         curentHealth -= damage; // Giảm sức khỏe hiện tại    
         anim.SetTrigger("isHurt");
+        //   Vector2 knockbackDir = (transform.position - player.position).normalized;
+        //float knockbackForce = 10f;
+        //rb.linearVelocity = knockbackDir * knockbackForce;
         Vector2 knockbackDir = (transform.position - player.position).normalized;
-	    float knockbackForce = 10f;
-	    rb.linearVelocity = knockbackDir * knockbackForce;
-
+        float knockbackDistance = 1f;
+        float knockbackDuration = 0.2f;
+        StartCoroutine(KnockBackThenResume(knockbackDir, knockbackDistance , knockbackDuration ,target , pointA , pointB ));
 		if (curentHealth <= 0f)
 		{
 			anim.SetTrigger("IsDead");
@@ -119,9 +137,6 @@ public class EnemyBatController : MonoBehaviour , IDamageable
 		rb.linearVelocity = Vector2.zero; // Dừng chuyển động   
 		Destroy(gameObject , 1f);
     }   
-    void ResetAttack()
-    {
-        hasAttacked = false;
-    }
+  
 
 }

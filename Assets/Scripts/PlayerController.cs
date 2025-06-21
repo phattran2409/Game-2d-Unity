@@ -40,6 +40,11 @@ public class PlayerController : MonoBehaviour
     private bool grounded = false;  
     private Health health;
 
+    public float attackTimer = 0f; // Timer for attack cooldown    
+    public float attackCooldown = 0.5f; // Cooldown time for attacks
+
+    public GameObject effectHealth;
+
     void Start()
     {
         GameObject startPoint = GameObject.FindWithTag("StartCheckpoint");
@@ -64,7 +69,7 @@ public class PlayerController : MonoBehaviour
 
             // Animation control
             //anim.SetBool("isJumping", !grounded); 
-            Debug.Log("Grounded: " + grounded); 
+           
             if (grounded)
             {   
                 anim.SetFloat("Speed", Mathf.Abs(horizontal));
@@ -82,8 +87,8 @@ public class PlayerController : MonoBehaviour
             // Flip
             if (!isFacingRight && horizontal > 0f) Flip();
             else if (isFacingRight && horizontal < 0f) Flip();
-
-
+            attackTimer -= Time.deltaTime; // Update attack cooldown timer  
+            
             UpdateState();
         }
     }
@@ -179,6 +184,17 @@ public class PlayerController : MonoBehaviour
             gems += 1;
             gemText.text = ": " + gems.ToString();
             Debug.Log("Gems collected: " + gems);
+        }
+
+        if (other.CompareTag("Heart"))
+        {
+            Destroy(other.gameObject);
+            health.IncreaseHealth(1f);
+         GameObject effect  =   Instantiate(effectHealth , transform.position , Quaternion.identity);
+            effect.transform.SetParent(transform); // Set effect as child of player 
+            Destroy(effect, 1f); // Destroy effect after 1 second
+
+            Debug.Log("Health increased. Current health: " + health.currentHealth); 
         }
     }
 
