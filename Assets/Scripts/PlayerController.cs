@@ -1,10 +1,9 @@
-﻿using System;
+﻿
+using System;
 using UnityEngine;
 using System.Collections.Generic;
-using System.Net.Mime;
 using TMPro;
 using UnityEngine.InputSystem;
-using UnityEngine.Rendering;
 
 public class PlayerController : MonoBehaviour
 {
@@ -22,8 +21,7 @@ public class PlayerController : MonoBehaviour
 
     [Header("Force Knock")]
     public float knockBackForce = 10f;
-    public float knockBackUpWard = 2f; 
-
+    public float knockBackUpWard = 2f;
 
     private float horizontal;
     private bool isFacingRight = true;
@@ -31,18 +29,18 @@ public class PlayerController : MonoBehaviour
 
     [Header("UI")]
     public TextMeshProUGUI cherryText;
-    public TextMeshProUGUI gemText;  
+    public TextMeshProUGUI gemText;
 
     public int cherries = 0;
-    public int gems = 0;    
+    public int gems = 0;
+
     private enum PlayerState { idle, run, jumping, land }
     private PlayerState currentState;
-    private bool grounded = false;  
+    private bool grounded = false;
     private Health health;
 
-    public float attackTimer = 0f; // Timer for attack cooldown    
-    public float attackCooldown = 0.5f; // Cooldown time for attacks
-
+    public float attackTimer = 0f;
+    public float attackCooldown = 0.5f;
     public GameObject effectHealth;
 
     void Start()
@@ -59,45 +57,43 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        // Move
-        if (health.Dead == false)
+        if (health.Dead) return;
+
+        grounded = IsGrounded();
+
+        // ➤ Movement using Transform (instead of Rigidbody)
+        Vector3 move = new Vector3(horizontal * speed * Time.deltaTime, 0f, 0f);
+        transform.Translate(move);
+
+        // ➤ Animation
+        if (grounded)
         {
-            //rb.linearVelocity = new Vector2(horizontal * speed, rb.linearVelocity.y);
-
-            // Ground check
-             grounded = IsGrounded();
-
-            // Animation control
-            //anim.SetBool("isJumping", !grounded); 
-           
-            if (grounded)
-            {   
-                anim.SetFloat("Speed", Mathf.Abs(horizontal));
-
-            }
-            else if (!grounded && rb.linearVelocity.y > 0.1f)
-            {
-                anim.SetBool("isJumping", true);
-            }
-            else
-            {
-                anim.SetBool("isJumping", false);
-            }
-
-            // Flip
-            if (!isFacingRight && horizontal > 0f) Flip();
-            else if (isFacingRight && horizontal < 0f) Flip();
-            attackTimer -= Time.deltaTime; // Update attack cooldown timer  
-            
-            UpdateState();
+            anim.SetFloat("Speed", Mathf.Abs(horizontal));
         }
+        else if (!grounded && rb.linearVelocity.y > 0.1f)
+        {
+            anim.SetBool("isJumping", true);
+        }
+        else
+        {
+            anim.SetBool("isJumping", false);
+        }
+
+        // ➤ Flip
+        if (!isFacingRight && horizontal > 0f) Flip();
+        else if (isFacingRight && horizontal < 0f) Flip();
+
+        // ➤ Attack cooldown timer
+        attackTimer -= Time.deltaTime;
+
+        // ➤ Update animation state
+        UpdateState();
     }
 
     private void FixedUpdate()
     {
+        // ❌ Không cần xử lý horizontal ở đây nữa
         if (health.Dead) return;
-
-        rb.linearVelocity = new Vector2(horizontal * speed, rb.linearVelocity.y);
     }
 
     private void UpdateState()
@@ -119,19 +115,19 @@ public class PlayerController : MonoBehaviour
     {
         if (currentState == newState) return;
         currentState = newState;
-
-        anim.Play(newState.ToString()); // Play clip theo tên state (Idle, Run, Jump...)
+        anim.Play(newState.ToString());
     }
-
 
     public void Move(InputAction.CallbackContext context)
     {
         if (health.Dead) return;
         horizontal = context.ReadValue<Vector2>().x;
     }
+
     public void Jump(InputAction.CallbackContext context)
     {
         if (health.Dead) return;
+
         if (context.performed && IsGrounded())
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
@@ -139,7 +135,7 @@ public class PlayerController : MonoBehaviour
 
         if (context.canceled && rb.linearVelocity.y > 0f)
         {
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y * 0.5f); // reduce jump height
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y * 0.5f);
         }
     }
 
@@ -156,28 +152,28 @@ public class PlayerController : MonoBehaviour
         transform.localScale = scale;
     }
 
-    public void KnockBack(Vector2 acctackerPos)
+    public void KnockBack(Vector2 attackerPos)
     {
-        Vector2 knockbackDirection = (transform.position - (Vector3)acctackerPos).normalized;
+        Vector2 knockbackDirection = (transform.position - (Vector3)attackerPos).normalized;
+        float knockDirectionX = MathF.Sign(knockbackDirection.x);
+        Vector2 force = new Vector2(knockDirectionX, knockBackForce) * knockBackUpWard;
 
-        float knockDirectionX = MathF.Sign(knockbackDirection.x);// Ensure knockback force is set correctly  
-        Vector2 force = new Vector2(knockDirectionX ,  knockBackForce) * knockBackUpWard;
-        
-        rb.linearVelocity  = Vector2.zero; // Reset velocity before applying knockback  
-        rb.AddForce(force, ForceMode2D.Impulse); // Apply knockback force   
+        rb.linearVelocity = Vector2.zero;
+        rb.AddForce(force, ForceMode2D.Impulse);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("Triggered with: " + other.gameObject.name);      
+        Debug.Log("Triggered with: " + other.gameObject.name);
+
         if (other.CompareTag("Collectable"))
         {
             Destroy(other.gameObject);
             cherries += 1;
             cherryText.text = ": " + cherries.ToString();
             Debug.Log("Cherries collected: " + cherries);
-        } 
-        
+        }
+
         if (other.CompareTag("Gems"))
         {
             Destroy(other.gameObject);
@@ -190,20 +186,18 @@ public class PlayerController : MonoBehaviour
         {
             Destroy(other.gameObject);
             health.IncreaseHealth(1f);
-         GameObject effect  =   Instantiate(effectHealth , transform.position , Quaternion.identity);
-            effect.transform.SetParent(transform); // Set effect as child of player 
-            Destroy(effect, 1f); // Destroy effect after 1 second
+            GameObject effect = Instantiate(effectHealth, transform.position, Quaternion.identity);
+            effect.transform.SetParent(transform);
+            Destroy(effect, 1f);
 
-            Debug.Log("Health increased. Current health: " + health.currentHealth); 
+            Debug.Log("Health increased. Current health: " + health.currentHealth);
         }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        grounded = IsGrounded();    
+        grounded = IsGrounded();
         Debug.Log("Player collided with: " + collision.gameObject.name);
     }
 }
-
-
 

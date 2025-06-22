@@ -35,7 +35,7 @@ public class PlayerAttack : MonoBehaviour
             Quaternion rotation = transform.rotation;
             anim.SetTrigger("attack");
             Instantiate(AttackPrefab, attackPoint.position, rotation);
-            Invoke(nameof(DoDamage), 0.2f);
+            Invoke(nameof(DoDamage), 0.1f);
         }
     }
 
