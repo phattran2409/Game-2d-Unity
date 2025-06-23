@@ -1,0 +1,455 @@
+fileFormatVersion: 2
+guid: ad80e1e25fd71c24a87d3ee591488a08
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1366634480330414105
+    second: dragon_knight_death_0
+  - first:
+      213: 6829270595358748894
+    second: dragon_knight_death_1
+  - first:
+      213: 2739105750398422905
+    second: dragon_knight_death_2
+  - first:
+      213: 2036315191341207595
+    second: dragon_knight_death_3
+  - first:
+      213: 3293161409699230341
+    second: dragon_knight_death_4
+  - first:
+      213: 5258602629091246359
+    second: dragon_knight_death_5
+  - first:
+      213: 4224297109270762516
+    second: dragon_knight_death_6
+  - first:
+      213: 1723826386391133875
+    second: dragon_knight_death_7
+  - first:
+      213: -54909007137184079
+    second: dragon_knight_death_8
+  - first:
+      213: 1855334321966370206
+    second: dragon_knight_death_9
+  - first:
+      213: -109714031505521971
+    second: dragon_knight_death_10
+  - first:
+      213: 5507398298710893086
+    second: dragon_knight_death_11
+  - first:
+      213: 5244759830923166795
+    second: dragon_knight_death_12
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: dragon_knight_death_0
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 157
+        height: 81
+      alignment: 9
+      pivot: {x: 0.3274107, y: 0.05197098}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e7ea1e4e2db80de0800000000000000
+      internalID: -1366634480330414105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_knight_death_1
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 0
+        width: 157
+        height: 81
+      alignment: 9
+      pivot: {x: 0.324328, y: 0.063918464}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed0f0676c6176ce50800000000000000
+      internalID: 6829270595358748894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_knight_death_2
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 0
+        width: 157
+        height: 81
+      alignment: 9
+      pivot: {x: 0.30583513, y: 0.063918464}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97f4ab6ea22430620800000000000000
+      internalID: 2739105750398422905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_knight_death_3
+      rect:
+        serializedVersion: 2
+        x: 1504
+        y: 0
+        width: 157
+        height: 61
+      alignment: 9
+      pivot: {x: 0.34898347, y: 0.07165471}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b20df9ea0e1724c10800000000000000
+      internalID: 2036315191341207595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_knight_death_4
+      rect:
+        serializedVersion: 2
+        x: 1984
+        y: 0
+        width: 157
+        height: 61
+      alignment: 9
+      pivot: {x: 0.35822895, y: 0.04785783}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 582b52daad8a3bd20800000000000000
+      internalID: 3293161409699230341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_knight_death_5
+      rect:
+        serializedVersion: 2
+        x: 2464
+        y: 0
+        width: 157
+        height: 51
+      alignment: 9
+      pivot: {x: 0.49075532, y: 0.07305462}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7114be9da3f4af840800000000000000
+      internalID: 5258602629091246359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_knight_death_6
+      rect:
+        serializedVersion: 2
+        x: 2944
+        y: 0
+        width: 157
+        height: 56
+      alignment: 9
+      pivot: {x: 0.49691793, y: 0.07661239}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4141bcfe6d7bf9a30800000000000000
+      internalID: 4224297109270762516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_knight_death_7
+      rect:
+        serializedVersion: 2
+        x: 3424
+        y: 0
+        width: 157
+        height: 51
+      alignment: 9
+      pivot: {x: 0.48459116, y: 0.10151793}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3bee94717f24ce710800000000000000
+      internalID: 1723826386391133875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_knight_death_8
+      rect:
+        serializedVersion: 2
+        x: 3904
+        y: 0
+        width: 157
+        height: 51
+      alignment: 9
+      pivot: {x: 0.50924623, y: 0.101517566}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b66e968c8cec3ff0800000000000000
+      internalID: -54909007137184079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_knight_death_9
+      rect:
+        serializedVersion: 2
+        x: 4384
+        y: 0
+        width: 157
+        height: 51
+      alignment: 9
+      pivot: {x: 0.51849246, y: 0.09203039}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9d45606cb87fb910800000000000000
+      internalID: 1855334321966370206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_knight_death_10
+      rect:
+        serializedVersion: 2
+        x: 4864
+        y: 0
+        width: 157
+        height: 51
+      alignment: 9
+      pivot: {x: 0.48767167, y: 0.10151793}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc2cc3d6ba73a7ef0800000000000000
+      internalID: -109714031505521971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_knight_death_11
+      rect:
+        serializedVersion: 2
+        x: 5344
+        y: 0
+        width: 157
+        height: 51
+      alignment: 9
+      pivot: {x: 0.49691793, y: 0.120493345}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e12e04fb2953e6c40800000000000000
+      internalID: 5507398298710893086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_knight_death_12
+      rect:
+        serializedVersion: 2
+        x: 5824
+        y: 0
+        width: 157
+        height: 51
+      alignment: 9
+      pivot: {x: 0.5030821, y: 0.09203004}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b44c96e374129c840800000000000000
+      internalID: 5244759830923166795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 311263d5dbd151a40bf6a326608fd647
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      dragon_knight_death_0: -1366634480330414105
+      dragon_knight_death_1: 6829270595358748894
+      dragon_knight_death_10: -109714031505521971
+      dragon_knight_death_11: 5507398298710893086
+      dragon_knight_death_12: 5244759830923166795
+      dragon_knight_death_2: 2739105750398422905
+      dragon_knight_death_3: 2036315191341207595
+      dragon_knight_death_4: 3293161409699230341
+      dragon_knight_death_5: 5258602629091246359
+      dragon_knight_death_6: 4224297109270762516
+      dragon_knight_death_7: 1723826386391133875
+      dragon_knight_death_8: -54909007137184079
+      dragon_knight_death_9: 1855334321966370206
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,1317 @@
+fileFormatVersion: 2
+guid: 4a5e67b02d05120419ac31bbf009628a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8622393940609584632
+    second: dragon_knight_firebreath_downward_air_0
+  - first:
+      213: 1255678728801119811
+    second: dragon_knight_firebreath_downward_air_1
+  - first:
+      213: 7492906192708689566
+    second: dragon_knight_firebreath_downward_air_2
+  - first:
+      213: -6433442679780097871
+    second: dragon_knight_firebreath_downward_air_3
+  - first:
+      213: -2256927129903722265
+    second: dragon_knight_firebreath_downward_air_4
+  - first:
+      213: 7238103509780297632
+    second: dragon_knight_firebreath_downward_air_5
+  - first:
+      213: 8881910427074203063
+    second: dragon_knight_firebreath_downward_air_6
+  - first:
+      213: 5580445057517623
+    second: dragon_knight_firebreath_downward_air_7
+  - first:
+      213: -3120657555273559472
+    second: dragon_knight_firebreath_downward_air_8
+  - first:
+      213: 3725890494044963079
+    second: dragon_knight_firebreath_downward_air_9
+  - first:
+      213: 6147639177653784436
+    second: dragon_knight_firebreath_downward_air_10
+  - first:
+      213: -6053732903827607093
+    second: dragon_knight_firebreath_downward_air_11
+  - first:
+      213: 6347143741663593664
+    second: dragon_knight_firebreath_downward_air_12
+  - first:
+      213: 1790230220353450140
+    second: dragon_knight_firebreath_downward_air_13
+  - first:
+      213: 8813555870329182331
+    second: dragon_knight_firebreath_downward_air_14
+  - first:
+      213: 4466931058606583187
+    second: dragon_knight_firebreath_downward_air_15
+  - first:
+      213: 278160823433471106
+    second: dragon_knight_firebreath_downward_air_16
+  - first:
+      213: 4130830900323180829
+    second: dragon_knight_firebreath_downward_air_17
+  - first:
+      213: -8362690319963919630
+    second: dragon_knight_firebreath_downward_air_18
+  - first:
+      213: -7003993382413750517
+    second: dragon_knight_firebreath_downward_air_19
+  - first:
+      213: -1351235551058279313
+    second: dragon_knight_firebreath_downward_air_20
+  - first:
+      213: -4767193010075347008
+    second: dragon_knight_firebreath_downward_air_21
+  - first:
+      213: 1953029123721497779
+    second: dragon_knight_firebreath_downward_air_22
+  - first:
+      213: -3606350796251873419
+    second: dragon_knight_firebreath_downward_air_23
+  - first:
+      213: 5163095828904227927
+    second: dragon_knight_firebreath_downward_air_24
+  - first:
+      213: 2034613612972733389
+    second: dragon_knight_firebreath_downward_air_25
+  - first:
+      213: -4078895179987761449
+    second: dragon_knight_firebreath_downward_air_26
+  - first:
+      213: 7299499933944305846
+    second: dragon_knight_firebreath_downward_air_27
+  - first:
+      213: 5131764920393335004
+    second: dragon_knight_firebreath_downward_air_28
+  - first:
+      213: -4951310986441287232
+    second: dragon_knight_firebreath_downward_air_29
+  - first:
+      213: 3499861471453392731
+    second: dragon_knight_firebreath_downward_air_30
+  - first:
+      213: 4930091418957357891
+    second: dragon_knight_firebreath_downward_air_31
+  - first:
+      213: -8855360112070823389
+    second: dragon_knight_firebreath_downward_air_32
+  - first:
+      213: -4800708269416722137
+    second: dragon_knight_firebreath_downward_air_33
+  - first:
+      213: -1209228291993781256
+    second: dragon_knight_firebreath_downward_air_34
+  - first:
+      213: -1961872181638511820
+    second: dragon_knight_firebreath_downward_air_35
+  - first:
+      213: 2236208912257044528
+    second: dragon_knight_firebreath_downward_air_36
+  - first:
+      213: 5764461685628350121
+    second: dragon_knight_firebreath_downward_air_37
+  - first:
+      213: 299821405014412049
+    second: dragon_knight_firebreath_downward_air_38
+  - first:
+      213: 8575443080151865104
+    second: dragon_knight_firebreath_downward_air_39
+  - first:
+      213: 4386268437959220103
+    second: dragon_knight_firebreath_downward_air_40
+  - first:
+      213: -3753971812511957098
+    second: dragon_knight_firebreath_downward_air_41
+  - first:
+      213: 3831140687066608141
+    second: dragon_knight_firebreath_downward_air_42
+  - first:
+      213: -4271683473240428179
+    second: dragon_knight_firebreath_downward_air_43
+  - first:
+      213: 9166502321824144050
+    second: dragon_knight_firebreath_downward_air_44
+  - first:
+      213: -8448225955094465850
+    second: dragon_knight_firebreath_downward_air_45
+  - first:
+      213: 5061155163640934633
+    second: dragon_knight_firebreath_downward_air_46
+  - first:
+      213: 6010172531992111566
+    second: dragon_knight_firebreath_downward_air_47
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: dragon_knight_firebreath_downward_air_0
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 279
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fdc3870b95e8a770800000000000000
+      internalID: 8622393940609584632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_knight_firebreath_downward_air_1
+      rect:
+        serializedVersion: 2
+        x: 989
+        y: 199
+        width: 157
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34e6436a6211d6110800000000000000
+      internalID: 1255678728801119811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_knight_firebreath_downward_air_2
+      rect:
+        serializedVersion: 2
+        x: 1469
+        y: 184
+        width: 157
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9ed9bfab762cf760800000000000000
+      internalID: 7492906192708689566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_knight_firebreath_downward_air_3
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 154
+        width: 157
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b0ced4f7f1d7b6a0800000000000000
+      internalID: -6433442679780097871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_knight_firebreath_downward_air_4
+      rect:
+        serializedVersion: 2
+        x: 509
+        y: 169
+        width: 157
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e0952aabb8cda0e0800000000000000
+      internalID: -2256927129903722265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_knight_firebreath_downward_air_5
+      rect:
+        serializedVersion: 2
+        x: 1064
+        y: 129
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a776f30bc8e27460800000000000000
+      internalID: 7238103509780297632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_knight_firebreath_downward_air_6
+      rect:
+        serializedVersion: 2
+        x: 1074
+        y: 184
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bd889c9972e24b70800000000000000
+      internalID: 8881910427074203063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_knight_firebreath_downward_air_7
+      rect:
+        serializedVersion: 2
+        x: 1104
+        y: 184
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 738875d9263d31000800000000000000
+      internalID: 5580445057517623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_knight_firebreath_downward_air_8
+      rect:
+        serializedVersion: 2
+        x: 1949
+        y: 174
+        width: 157
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 052d748cc7231b4d0800000000000000
+      internalID: -3120657555273559472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_knight_firebreath_downward_air_9
+      rect:
+        serializedVersion: 2
+        x: 2429
+        y: 159
+        width: 157
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7010e89e9a505b330800000000000000
+      internalID: 3725890494044963079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_knight_firebreath_downward_air_10
+      rect:
+        serializedVersion: 2
+        x: 2944
+        y: 134
+        width: 157
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47f045fa24dc05550800000000000000
+      internalID: 6147639177653784436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_knight_firebreath_downward_air_11
+      rect:
+        serializedVersion: 2
+        x: 3424
+        y: 109
+        width: 157
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc1f24e7ff1dcfba0800000000000000
+      internalID: -6053732903827607093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_knight_firebreath_downward_air_12
+      rect:
+        serializedVersion: 2
+        x: 2024
+        y: 164
+        width: 12
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c4c33cba95951850800000000000000
+      internalID: 6347143741663593664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_knight_firebreath_downward_air_13
+      rect:
+        serializedVersion: 2
+        x: 2099
+        y: 174
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c90365e76ec28d810800000000000000
+      internalID: 1790230220353450140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_knight_firebreath_downward_air_14
+      rect:
+        serializedVersion: 2
+        x: 2119
+        y: 169
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b78970b2e5a005a70800000000000000
+      internalID: 8813555870329182331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_knight_firebreath_downward_air_15
+      rect:
+        serializedVersion: 2
+        x: 1554
+        y: 154
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39da768812abdfd30800000000000000
+      internalID: 4466931058606583187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_knight_firebreath_downward_air_16
+      rect:
+        serializedVersion: 2
+        x: 2064
+        y: 159
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 284ae2f8bc93cd300800000000000000
+      internalID: 278160823433471106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_knight_firebreath_downward_air_17
+      rect:
+        serializedVersion: 2
+        x: 1549
+        y: 54
+        width: 47
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1168f851d8a35930800000000000000
+      internalID: 4130830900323180829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_knight_firebreath_downward_air_18
+      rect:
+        serializedVersion: 2
+        x: 2489
+        y: 149
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fae3ff1671c1fb80800000000000000
+      internalID: -8362690319963919630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_knight_firebreath_downward_air_19
+      rect:
+        serializedVersion: 2
+        x: 2624
+        y: 149
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0faa00a021dcce90800000000000000
+      internalID: -7003993382413750517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_knight_firebreath_downward_air_20
+      rect:
+        serializedVersion: 2
+        x: 3899
+        y: 29
+        width: 162
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f64ca4bec627f3de0800000000000000
+      internalID: -1351235551058279313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_knight_firebreath_downward_air_21
+      rect:
+        serializedVersion: 2
+        x: 4394
+        y: 119
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c7dbba073787ddb0800000000000000
+      internalID: -4767193010075347008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_knight_firebreath_downward_air_22
+      rect:
+        serializedVersion: 2
+        x: 4509
+        y: 129
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3bc8963f3ad8a1b10800000000000000
+      internalID: 1953029123721497779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_knight_firebreath_downward_air_23
+      rect:
+        serializedVersion: 2
+        x: 4594
+        y: 119
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57fb5fdde0ba3fdc0800000000000000
+      internalID: -3606350796251873419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_knight_firebreath_downward_air_24
+      rect:
+        serializedVersion: 2
+        x: 2034
+        y: 99
+        width: 7
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75433271d4007a740800000000000000
+      internalID: 5163095828904227927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_knight_firebreath_downward_air_25
+      rect:
+        serializedVersion: 2
+        x: 4479
+        y: 109
+        width: 17
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc3f9681d466c3c10800000000000000
+      internalID: 2034613612972733389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_knight_firebreath_downward_air_26
+      rect:
+        serializedVersion: 2
+        x: 2044
+        y: 94
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d6c6c8d17ad467c0800000000000000
+      internalID: -4078895179987761449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_knight_firebreath_downward_air_27
+      rect:
+        serializedVersion: 2
+        x: 2064
+        y: 99
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b8dcb8f3880d4560800000000000000
+      internalID: 7299499933944305846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_knight_firebreath_downward_air_28
+      rect:
+        serializedVersion: 2
+        x: 3429
+        y: 9
+        width: 97
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd00bde7101b73740800000000000000
+      internalID: 5131764920393335004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_knight_firebreath_downward_air_29
+      rect:
+        serializedVersion: 2
+        x: 3869
+        y: 84
+        width: 17
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c99da814e8694bb0800000000000000
+      internalID: -4951310986441287232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_knight_firebreath_downward_air_30
+      rect:
+        serializedVersion: 2
+        x: 2024
+        y: 0
+        width: 57
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5f2e091771029030800000000000000
+      internalID: 3499861471453392731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_knight_firebreath_downward_air_31
+      rect:
+        serializedVersion: 2
+        x: 4064
+        y: 84
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 343a72956043b6440800000000000000
+      internalID: 4930091418957357891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_knight_firebreath_downward_air_32
+      rect:
+        serializedVersion: 2
+        x: 4079
+        y: 54
+        width: 22
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 322fad155e07b1580800000000000000
+      internalID: -8855360112070823389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_knight_firebreath_downward_air_33
+      rect:
+        serializedVersion: 2
+        x: 4339
+        y: 69
+        width: 12
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 721d223a345706db0800000000000000
+      internalID: -4800708269416722137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_knight_firebreath_downward_air_34
+      rect:
+        serializedVersion: 2
+        x: 4384
+        y: 9
+        width: 157
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fbbb537645f73fe0800000000000000
+      internalID: -1209228291993781256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_knight_firebreath_downward_air_35
+      rect:
+        serializedVersion: 2
+        x: 2954
+        y: 0
+        width: 107
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43347be25a706c4e0800000000000000
+      internalID: -1961872181638511820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_knight_firebreath_downward_air_36
+      rect:
+        serializedVersion: 2
+        x: 3394
+        y: 0
+        width: 42
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 030d4a2682c980f10800000000000000
+      internalID: 2236208912257044528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_knight_firebreath_downward_air_37
+      rect:
+        serializedVersion: 2
+        x: 3514
+        y: 9
+        width: 57
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ae2a359c5b7fff40800000000000000
+      internalID: 5764461685628350121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_knight_firebreath_downward_air_38
+      rect:
+        serializedVersion: 2
+        x: 3854
+        y: 14
+        width: 22
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11b41f5bafd292400800000000000000
+      internalID: 299821405014412049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_knight_firebreath_downward_air_39
+      rect:
+        serializedVersion: 2
+        x: 4569
+        y: 49
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0179808fb08120770800000000000000
+      internalID: 8575443080151865104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_knight_firebreath_downward_air_40
+      rect:
+        serializedVersion: 2
+        x: 4884
+        y: 0
+        width: 157
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78b1116a7e72fdc30800000000000000
+      internalID: 4386268437959220103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_knight_firebreath_downward_air_41
+      rect:
+        serializedVersion: 2
+        x: 2494
+        y: 0
+        width: 72
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69f3562a68637ebc0800000000000000
+      internalID: -3753971812511957098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_knight_firebreath_downward_air_42
+      rect:
+        serializedVersion: 2
+        x: 3559
+        y: 0
+        width: 17
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d02b6291822fa2530800000000000000
+      internalID: 3831140687066608141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_knight_firebreath_downward_air_43
+      rect:
+        serializedVersion: 2
+        x: 3884
+        y: 9
+        width: 12
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d61f890738ee7b4c0800000000000000
+      internalID: -4271683473240428179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_knight_firebreath_downward_air_44
+      rect:
+        serializedVersion: 2
+        x: 4054
+        y: 14
+        width: 37
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ba1f15ab45f53f70800000000000000
+      internalID: 9166502321824144050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_knight_firebreath_downward_air_45
+      rect:
+        serializedVersion: 2
+        x: 4339
+        y: 19
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c2fb54214fd1ca80800000000000000
+      internalID: -8448225955094465850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_knight_firebreath_downward_air_46
+      rect:
+        serializedVersion: 2
+        x: 4099
+        y: 0
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e0b3f16ec5dc3640800000000000000
+      internalID: 5061155163640934633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_knight_firebreath_downward_air_47
+      rect:
+        serializedVersion: 2
+        x: 4624
+        y: 0
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec92338131c686350800000000000000
+      internalID: 6010172531992111566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
