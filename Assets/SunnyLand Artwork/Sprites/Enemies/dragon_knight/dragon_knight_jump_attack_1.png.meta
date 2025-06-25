@@ -153,6 +153,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -609,7 +622,27 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      dragon_knight_jump_attack_1_0: -5943133674371954190
+      dragon_knight_jump_attack_1_1: 5973994720000900312
+      dragon_knight_jump_attack_1_10: 4994951457907011712
+      dragon_knight_jump_attack_1_11: 2824139117758193696
+      dragon_knight_jump_attack_1_12: -5105111074433621888
+      dragon_knight_jump_attack_1_13: -4474774745068161192
+      dragon_knight_jump_attack_1_14: -5339329480806040309
+      dragon_knight_jump_attack_1_15: 234144036072767486
+      dragon_knight_jump_attack_1_16: 7648382667510743100
+      dragon_knight_jump_attack_1_17: -3881012151366262839
+      dragon_knight_jump_attack_1_18: -6485358653133799130
+      dragon_knight_jump_attack_1_19: -1555465398808310166
+      dragon_knight_jump_attack_1_2: 8919244496868589940
+      dragon_knight_jump_attack_1_3: -3098201401460663178
+      dragon_knight_jump_attack_1_4: -8306983375000149159
+      dragon_knight_jump_attack_1_5: -8624561126897048316
+      dragon_knight_jump_attack_1_6: 8617175266158376142
+      dragon_knight_jump_attack_1_7: 5903322965003942725
+      dragon_knight_jump_attack_1_8: 3458814772782205905
+      dragon_knight_jump_attack_1_9: 3955529787940541972
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

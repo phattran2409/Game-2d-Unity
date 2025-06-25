@@ -135,6 +135,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -459,7 +472,21 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      dragon_knight_firebreath_character_only_0: 3167848871943817935
+      dragon_knight_firebreath_character_only_1: -3982125166470834661
+      dragon_knight_firebreath_character_only_10: -7430595730938731860
+      dragon_knight_firebreath_character_only_11: -712745047661729137
+      dragon_knight_firebreath_character_only_12: -520358468442326789
+      dragon_knight_firebreath_character_only_13: 3085352046436938576
+      dragon_knight_firebreath_character_only_2: 2091163353183993471
+      dragon_knight_firebreath_character_only_3: 254193171038013882
+      dragon_knight_firebreath_character_only_4: -4334986610850952840
+      dragon_knight_firebreath_character_only_5: -4061137656237449181
+      dragon_knight_firebreath_character_only_6: 8520599000436313554
+      dragon_knight_firebreath_character_only_7: 4537663989780686006
+      dragon_knight_firebreath_character_only_8: 7959431357385478816
+      dragon_knight_firebreath_character_only_9: -7996048820321151050
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

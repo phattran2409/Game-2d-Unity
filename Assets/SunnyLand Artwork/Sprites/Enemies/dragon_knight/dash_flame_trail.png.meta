@@ -159,6 +159,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -659,7 +672,29 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      dash_flame_trail_0: -4919908304095155243
+      dash_flame_trail_1: -8599102731258352777
+      dash_flame_trail_10: -3551159270527688056
+      dash_flame_trail_11: -7015625682057376295
+      dash_flame_trail_12: -5672194317124223059
+      dash_flame_trail_13: 288781540035569607
+      dash_flame_trail_14: -9043320735394000683
+      dash_flame_trail_15: 8635374396923620432
+      dash_flame_trail_16: -1481272737974848468
+      dash_flame_trail_17: 6604453892491186080
+      dash_flame_trail_18: 2632926907990897673
+      dash_flame_trail_19: 2096314991663426673
+      dash_flame_trail_2: -7420298637317290957
+      dash_flame_trail_20: -3171763960237037637
+      dash_flame_trail_21: 1868248717408072970
+      dash_flame_trail_3: -6792789131833172535
+      dash_flame_trail_4: -6493957665199655902
+      dash_flame_trail_5: 8414708255928497395
+      dash_flame_trail_6: 7205103124070366646
+      dash_flame_trail_7: 937017741539796075
+      dash_flame_trail_8: 4528481901936950381
+      dash_flame_trail_9: -210451286086841063
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

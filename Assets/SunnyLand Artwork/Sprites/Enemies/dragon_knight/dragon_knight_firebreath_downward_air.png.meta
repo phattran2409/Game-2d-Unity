@@ -237,6 +237,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -1309,7 +1322,55 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      dragon_knight_firebreath_downward_air_0: 8622393940609584632
+      dragon_knight_firebreath_downward_air_1: 1255678728801119811
+      dragon_knight_firebreath_downward_air_10: 6147639177653784436
+      dragon_knight_firebreath_downward_air_11: -6053732903827607093
+      dragon_knight_firebreath_downward_air_12: 6347143741663593664
+      dragon_knight_firebreath_downward_air_13: 1790230220353450140
+      dragon_knight_firebreath_downward_air_14: 8813555870329182331
+      dragon_knight_firebreath_downward_air_15: 4466931058606583187
+      dragon_knight_firebreath_downward_air_16: 278160823433471106
+      dragon_knight_firebreath_downward_air_17: 4130830900323180829
+      dragon_knight_firebreath_downward_air_18: -8362690319963919630
+      dragon_knight_firebreath_downward_air_19: -7003993382413750517
+      dragon_knight_firebreath_downward_air_2: 7492906192708689566
+      dragon_knight_firebreath_downward_air_20: -1351235551058279313
+      dragon_knight_firebreath_downward_air_21: -4767193010075347008
+      dragon_knight_firebreath_downward_air_22: 1953029123721497779
+      dragon_knight_firebreath_downward_air_23: -3606350796251873419
+      dragon_knight_firebreath_downward_air_24: 5163095828904227927
+      dragon_knight_firebreath_downward_air_25: 2034613612972733389
+      dragon_knight_firebreath_downward_air_26: -4078895179987761449
+      dragon_knight_firebreath_downward_air_27: 7299499933944305846
+      dragon_knight_firebreath_downward_air_28: 5131764920393335004
+      dragon_knight_firebreath_downward_air_29: -4951310986441287232
+      dragon_knight_firebreath_downward_air_3: -6433442679780097871
+      dragon_knight_firebreath_downward_air_30: 3499861471453392731
+      dragon_knight_firebreath_downward_air_31: 4930091418957357891
+      dragon_knight_firebreath_downward_air_32: -8855360112070823389
+      dragon_knight_firebreath_downward_air_33: -4800708269416722137
+      dragon_knight_firebreath_downward_air_34: -1209228291993781256
+      dragon_knight_firebreath_downward_air_35: -1961872181638511820
+      dragon_knight_firebreath_downward_air_36: 2236208912257044528
+      dragon_knight_firebreath_downward_air_37: 5764461685628350121
+      dragon_knight_firebreath_downward_air_38: 299821405014412049
+      dragon_knight_firebreath_downward_air_39: 8575443080151865104
+      dragon_knight_firebreath_downward_air_4: -2256927129903722265
+      dragon_knight_firebreath_downward_air_40: 4386268437959220103
+      dragon_knight_firebreath_downward_air_41: -3753971812511957098
+      dragon_knight_firebreath_downward_air_42: 3831140687066608141
+      dragon_knight_firebreath_downward_air_43: -4271683473240428179
+      dragon_knight_firebreath_downward_air_44: 9166502321824144050
+      dragon_knight_firebreath_downward_air_45: -8448225955094465850
+      dragon_knight_firebreath_downward_air_46: 5061155163640934633
+      dragon_knight_firebreath_downward_air_47: 6010172531992111566
+      dragon_knight_firebreath_downward_air_5: 7238103509780297632
+      dragon_knight_firebreath_downward_air_6: 8881910427074203063
+      dragon_knight_firebreath_downward_air_7: 5580445057517623
+      dragon_knight_firebreath_downward_air_8: -3120657555273559472
+      dragon_knight_firebreath_downward_air_9: 3725890494044963079
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

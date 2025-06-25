@@ -135,6 +135,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -459,7 +472,21 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      dragon_knight_drink_potion_0: -2567532321709037500
+      dragon_knight_drink_potion_1: -1306745163603141268
+      dragon_knight_drink_potion_10: 1755255169927805494
+      dragon_knight_drink_potion_11: 8540129836970585222
+      dragon_knight_drink_potion_12: -7645613387517987787
+      dragon_knight_drink_potion_13: -266684142530179091
+      dragon_knight_drink_potion_2: -1896777583140529250
+      dragon_knight_drink_potion_3: -3386927298031753924
+      dragon_knight_drink_potion_4: 7101089014036159303
+      dragon_knight_drink_potion_5: 6836428088826230082
+      dragon_knight_drink_potion_6: 8673136943540920851
+      dragon_knight_drink_potion_7: 7313788247994567414
+      dragon_knight_drink_potion_8: 1911952569150076638
+      dragon_knight_drink_potion_9: 6172823419646239674
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

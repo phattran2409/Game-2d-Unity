@@ -207,6 +207,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -1059,7 +1072,45 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      dragon_knight_firebreath_effect_0: 178226018052147615
+      dragon_knight_firebreath_effect_1: -7538181229500616459
+      dragon_knight_firebreath_effect_10: 8050060183274831232
+      dragon_knight_firebreath_effect_11: 193343054347906034
+      dragon_knight_firebreath_effect_12: 5343918901145003895
+      dragon_knight_firebreath_effect_13: -3944725105158753331
+      dragon_knight_firebreath_effect_14: 1435625890327214194
+      dragon_knight_firebreath_effect_15: -7091547137719297658
+      dragon_knight_firebreath_effect_16: 7809581845444064337
+      dragon_knight_firebreath_effect_17: -9208329307783446266
+      dragon_knight_firebreath_effect_18: 8785272097037267229
+      dragon_knight_firebreath_effect_19: -8078247456071908922
+      dragon_knight_firebreath_effect_2: -4910362951606420751
+      dragon_knight_firebreath_effect_20: -2070446042564887429
+      dragon_knight_firebreath_effect_21: 9168885198210993571
+      dragon_knight_firebreath_effect_22: 5083829739779874869
+      dragon_knight_firebreath_effect_23: -4142350471352821655
+      dragon_knight_firebreath_effect_24: 5425552505281947156
+      dragon_knight_firebreath_effect_25: -8672380194726078197
+      dragon_knight_firebreath_effect_26: -6356871538997052561
+      dragon_knight_firebreath_effect_27: 572130177597274144
+      dragon_knight_firebreath_effect_28: 839118205132916904
+      dragon_knight_firebreath_effect_29: -1810653370234325133
+      dragon_knight_firebreath_effect_3: 6437204301283886747
+      dragon_knight_firebreath_effect_30: -5808917581655255384
+      dragon_knight_firebreath_effect_31: -8440761166125094805
+      dragon_knight_firebreath_effect_32: -6805659441647466183
+      dragon_knight_firebreath_effect_33: 2955929534209261003
+      dragon_knight_firebreath_effect_34: -4671729304404079616
+      dragon_knight_firebreath_effect_35: 1315382312697377825
+      dragon_knight_firebreath_effect_36: 5926787341626841885
+      dragon_knight_firebreath_effect_37: -8725404486169908212
+      dragon_knight_firebreath_effect_4: -4530159535779083504
+      dragon_knight_firebreath_effect_5: -1823244592935507889
+      dragon_knight_firebreath_effect_6: -6688118359792667511
+      dragon_knight_firebreath_effect_7: 4225361725666139920
+      dragon_knight_firebreath_effect_8: 134658994085562923
+      dragon_knight_firebreath_effect_9: -2913163454357480931
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

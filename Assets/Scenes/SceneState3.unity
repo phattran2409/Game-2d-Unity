@@ -69229,7 +69229,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1999361685
-  m_SortingLayer: 6
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -109972,7 +109972,7 @@ Transform:
   m_GameObject: {fileID: 590665737}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -17.35, y: -3.45, z: -10}
+  m_LocalPosition: {x: -17.35, y: 10.7, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -110337,8 +110337,8 @@ TilemapRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -826231943
-  m_SortingLayer: 4
+  m_SortingLayerID: 1449619565
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -111506,7 +111506,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1999361685
-  m_SortingLayer: 6
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -112012,7 +112012,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7993098596014646792, guid: fce495a76232f08479924a8435745a86, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.45
+      value: 10.7
       objectReference: {fileID: 0}
     - target: {fileID: 7993098596014646792, guid: fce495a76232f08479924a8435745a86, type: 3}
       propertyPath: m_LocalPosition.z
@@ -112295,7 +112295,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 6a646faa2b060c94f805d1260a69c689, type: 3}
+  m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 6a646faa2b060c94f805d1260a69c689, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -112395,6 +112395,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   climbSpeed: 5
+  isOnLadder: 0
 --- !u!1 &1592950027
 GameObject:
   m_ObjectHideFlags: 0
@@ -112617,7 +112618,7 @@ Transform:
   m_GameObject: {fileID: 1994043416}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -17.35, y: -3.45, z: -10}
+  m_LocalPosition: {x: -17.35, y: 10.7, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

@@ -4,8 +4,8 @@ using UnityEngine.InputSystem;
 public class PlayerLadderClimb : MonoBehaviour
 {
     public float climbSpeed = 5f;
-    private bool isClimbing;
-    private bool isOnLadder;
+    private bool isClimbing;  
+    public bool isOnLadder;
 
     private Rigidbody2D rb;
     private Animator animator;
@@ -51,7 +51,7 @@ public class PlayerLadderClimb : MonoBehaviour
         }
 
         animator.SetBool("isClimbing", isClimbing);
-        animator.SetFloat("ClimbSpeed", vertical);
+        //animator.SetFloat("ClimbSpeed", vertical);
     }
 
     void FixedUpdate()
@@ -78,7 +78,9 @@ public class PlayerLadderClimb : MonoBehaviour
     {
         if (collision.CompareTag("Ladder"))
         {
+            animator.SetBool("isClimbing",true); 
             isOnLadder = true;
+            isClimbing = true;
         }
     }
 
@@ -89,7 +91,7 @@ public class PlayerLadderClimb : MonoBehaviour
             isOnLadder = false;
             isClimbing = false;
             animator.SetBool("isClimbing", false);
-      
+
         }
     }
 }

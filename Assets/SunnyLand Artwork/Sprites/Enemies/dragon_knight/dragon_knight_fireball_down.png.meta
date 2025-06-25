@@ -126,6 +126,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -384,7 +397,18 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      dragon_knight_fireball_down_0: -7728191468546180891
+      dragon_knight_fireball_down_1: 1410865670742586596
+      dragon_knight_fireball_down_10: -5149529485325195225
+      dragon_knight_fireball_down_2: 3329423902536866045
+      dragon_knight_fireball_down_3: -1171370449387918332
+      dragon_knight_fireball_down_4: -628429838243055941
+      dragon_knight_fireball_down_5: 2577494744466511926
+      dragon_knight_fireball_down_6: 155796343580077055
+      dragon_knight_fireball_down_7: -814923636574739048
+      dragon_knight_fireball_down_8: -8692353592433197429
+      dragon_knight_fireball_down_9: -3488808377673226647
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

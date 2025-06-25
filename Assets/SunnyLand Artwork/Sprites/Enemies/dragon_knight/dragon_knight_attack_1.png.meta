@@ -138,6 +138,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -484,7 +497,22 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      dragon_knight_attack_1_0: 6230913906377056430
+      dragon_knight_attack_1_1: 7104186386418224321
+      dragon_knight_attack_1_10: -1732819129711378283
+      dragon_knight_attack_1_11: 6136706643784237844
+      dragon_knight_attack_1_12: 2830597081458887194
+      dragon_knight_attack_1_13: -8001807414642581669
+      dragon_knight_attack_1_14: -3889584768411642208
+      dragon_knight_attack_1_2: -5386252545260973376
+      dragon_knight_attack_1_3: 3472836538407496607
+      dragon_knight_attack_1_4: 8129864378910208737
+      dragon_knight_attack_1_5: 6153372148580745868
+      dragon_knight_attack_1_6: -3976545633791491527
+      dragon_knight_attack_1_7: -5885096835646165031
+      dragon_knight_attack_1_8: -8685288944552884470
+      dragon_knight_attack_1_9: -3312447689163395969
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

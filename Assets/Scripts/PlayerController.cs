@@ -42,6 +42,11 @@ public class PlayerController : MonoBehaviour
     public float attackTimer = 0f;
     public float attackCooldown = 0.5f;
     public GameObject effectHealth;
+    
+    private PlayerLadderClimb climbScript;
+    [Header("Buffer time JUMP")]
+    [SerializeField] private float jumpBufferTime = 0.2f;
+    private float jumpBufferCounter;
 
     void Start()
     {
@@ -53,6 +58,7 @@ public class PlayerController : MonoBehaviour
         anim = GetComponent<Animator>();
         coll = GetComponent<Collider2D>();
         health = GetComponent<Health>();
+        climbScript = GetComponent<PlayerLadderClimb>();
     }
 
     void Update()
@@ -70,7 +76,7 @@ public class PlayerController : MonoBehaviour
         {
             anim.SetFloat("Speed", Mathf.Abs(horizontal));
         }
-        else if (!grounded && rb.linearVelocity.y > 0.1f)
+        else if (!grounded && rb.linearVelocity.y > 0.1f && climbScript.isOnLadder == false)
         {
             anim.SetBool("isJumping", true);
         }
@@ -88,6 +94,16 @@ public class PlayerController : MonoBehaviour
 
         // ➤ Update animation state
         UpdateState();
+
+
+        if (jumpBufferCounter > 0)
+            jumpBufferCounter -= Time.deltaTime;
+
+        if (jumpBufferCounter > 0 && IsGrounded())
+        {
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+            jumpBufferCounter = 0;
+        }
     }
 
     private void FixedUpdate()
@@ -128,9 +144,10 @@ public class PlayerController : MonoBehaviour
     {
         if (health.Dead) return;
 
-        if (context.performed && IsGrounded())
+
+        if (context.performed)
         {
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+            jumpBufferCounter = jumpBufferTime;
         }
 
         if (context.canceled && rb.linearVelocity.y > 0f)
@@ -141,7 +158,7 @@ public class PlayerController : MonoBehaviour
 
     private bool IsGrounded()
     {
-        return Physics2D.OverlapCircle(groundCheck.position, 0.15f, groundLayer);
+        return Physics2D.OverlapCircle(groundCheck.position, 0.3f, groundLayer);
     }
 
     private void Flip()
@@ -188,8 +205,7 @@ public class PlayerController : MonoBehaviour
             health.IncreaseHealth(1f);
             GameObject effect = Instantiate(effectHealth, transform.position, Quaternion.identity);
             effect.transform.SetParent(transform);
-            Destroy(effect, 1f);
-
+            Destroy(effect, 1f);    
             Debug.Log("Health increased. Current health: " + health.currentHealth);
         }
     }

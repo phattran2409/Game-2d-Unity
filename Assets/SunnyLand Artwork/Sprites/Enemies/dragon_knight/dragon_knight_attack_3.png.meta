@@ -174,6 +174,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -784,7 +797,34 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      dragon_knight_attack_3_0: -654357661850237824
+      dragon_knight_attack_3_1: -5422153885402990419
+      dragon_knight_attack_3_10: 3995965006996729632
+      dragon_knight_attack_3_11: 2654072103924832580
+      dragon_knight_attack_3_12: 9108904072293657073
+      dragon_knight_attack_3_13: 3848912449095589804
+      dragon_knight_attack_3_14: -1736687306163141934
+      dragon_knight_attack_3_15: -4617234335204384597
+      dragon_knight_attack_3_16: -4222385979640159164
+      dragon_knight_attack_3_17: -5628978503703125437
+      dragon_knight_attack_3_18: -4216837164262877180
+      dragon_knight_attack_3_19: -3220814195650028099
+      dragon_knight_attack_3_2: -7142524989215255712
+      dragon_knight_attack_3_20: 6832020112345544797
+      dragon_knight_attack_3_21: -2653915493850898754
+      dragon_knight_attack_3_22: -8906054890201006489
+      dragon_knight_attack_3_23: -2218912627641592166
+      dragon_knight_attack_3_24: -6002801934574465042
+      dragon_knight_attack_3_25: -8657606204315073410
+      dragon_knight_attack_3_26: -1826807099213066276
+      dragon_knight_attack_3_3: -3722186362173172221
+      dragon_knight_attack_3_4: -750727442219019513
+      dragon_knight_attack_3_5: 2745261978117564828
+      dragon_knight_attack_3_6: -4540919461423845164
+      dragon_knight_attack_3_7: 8115696298088885463
+      dragon_knight_attack_3_8: -6288306533622005966
+      dragon_knight_attack_3_9: 6138415210590148196
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
