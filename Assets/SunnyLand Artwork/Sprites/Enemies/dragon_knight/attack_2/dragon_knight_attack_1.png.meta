@@ -1,0 +1,333 @@
+fileFormatVersion: 2
+guid: 51361d36e7d61e048a8c68ecbd055567
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6230913906377056430
+    second: dragon_knight_attack_1_0
+  - first:
+      213: 7104186386418224321
+    second: dragon_knight_attack_1_1
+  - first:
+      213: -5386252545260973376
+    second: dragon_knight_attack_1_2
+  - first:
+      213: 3472836538407496607
+    second: dragon_knight_attack_1_3
+  - first:
+      213: 8129864378910208737
+    second: dragon_knight_attack_1_4
+  - first:
+      213: 6153372148580745868
+    second: dragon_knight_attack_1_5
+  - first:
+      213: -3976545633791491527
+    second: dragon_knight_attack_1_6
+  - first:
+      213: -5885096835646165031
+    second: dragon_knight_attack_1_7
+  - first:
+      213: -8685288944552884470
+    second: dragon_knight_attack_1_8
+  - first:
+      213: -3312447689163395969
+    second: dragon_knight_attack_1_9
+  - first:
+      213: -1732819129711378283
+    second: dragon_knight_attack_1_10
+  - first:
+      213: 6136706643784237844
+    second: dragon_knight_attack_1_11
+  - first:
+      213: 2830597081458887194
+    second: dragon_knight_attack_1_12
+  - first:
+      213: -8001807414642581669
+    second: dragon_knight_attack_1_13
+  - first:
+      213: -3889584768411642208
+    second: dragon_knight_attack_1_14
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: dragon_knight_attack_1_7
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 0
+        width: 155
+        height: 75
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9dfe88acb9fe35ea0800000000000000
+      internalID: -5885096835646165031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_knight_attack_1_8
+      rect:
+        serializedVersion: 2
+        x: 545
+        y: 2
+        width: 175
+        height: 75
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a074c48b8b7a77780800000000000000
+      internalID: -8685288944552884470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_knight_attack_1_9
+      rect:
+        serializedVersion: 2
+        x: 1060
+        y: 0
+        width: 195
+        height: 75
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7c2a567062d702d0800000000000000
+      internalID: -3312447689163395969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_knight_attack_1_10
+      rect:
+        serializedVersion: 2
+        x: 1540
+        y: 0
+        width: 200
+        height: 96
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5904d81be2ac3f7e0800000000000000
+      internalID: -1732819129711378283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_knight_attack_1_11
+      rect:
+        serializedVersion: 2
+        x: 2020
+        y: 0
+        width: 235
+        height: 107
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4130a89cd26f92550800000000000000
+      internalID: 6136706643784237844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_knight_attack_1_13
+      rect:
+        serializedVersion: 2
+        x: 2500
+        y: 0
+        width: 175
+        height: 75
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5f54214d8ed3f090800000000000000
+      internalID: -8001807414642581669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_knight_attack_1_12
+      rect:
+        serializedVersion: 2
+        x: 2235
+        y: 65
+        width: 5
+        height: 5
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c1f37741abe7644f84b1ef30bda6783
+      internalID: 492474045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 0c56d54a0e6d71543b2e7961842eee9b
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":7,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      dragon_knight_attack_1_0: -160040743
+      dragon_knight_attack_1_1: 1473943910
+      dragon_knight_attack_1_10: -1732819129711378283
+      dragon_knight_attack_1_11: 6136706643784237844
+      dragon_knight_attack_1_12: 492474045
+      dragon_knight_attack_1_13: -8001807414642581669
+      dragon_knight_attack_1_14: 705781870
+      dragon_knight_attack_1_2: -2053653374
+      dragon_knight_attack_1_3: 1265715737
+      dragon_knight_attack_1_4: 1874892923
+      dragon_knight_attack_1_5: -436912052
+      dragon_knight_attack_1_6: 1675851721
+      dragon_knight_attack_1_7: -5885096835646165031
+      dragon_knight_attack_1_8: -8685288944552884470
+      dragon_knight_attack_1_9: -3312447689163395969
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,12 +1,18 @@
 using UnityEngine;
 using System.Collections;
+using Assets.Scripts;
 
-public class BossController : MonoBehaviour
+public class BossController : Boss, IDamageable
 {
+    public bool isInCutscene = false;
+
+
     [Header("Health Settings")]
-    public int totalSegments = 4;
-    public int currentSegment;
+    public float totalSegments = 4;
+    public float currentSegment;
     public bool isDead = false;
+    private bool isInvulnerable = false; 
+    public float invulnerableTime = 3f;
 
     [Header("UI Components")]
     public BossHealthBar healthBarUI;
@@ -20,7 +26,12 @@ public class BossController : MonoBehaviour
     private float attackTimer;
 
 
+    [Header("Fireball Settings")]
+    public GameObject fireballPrefab;
+    public Transform firePoint;
 
+    [Header("Player Reference")]
+    public Transform player;
     private Animator anim;
 
     private void Awake()
@@ -37,7 +48,7 @@ public class BossController : MonoBehaviour
 
     private void Update()
     {
-        if (isDead) return;
+        if (isDead || isInCutscene) return;
 
         // Update health bar
         UpdateHealthBar();
@@ -46,35 +57,21 @@ public class BossController : MonoBehaviour
         if (attackTimer <= 0f)
         {
             anim.SetTrigger("isAttacking");
+            ShootFireball();
             attackTimer = attackCooldown;
         }
 
-#if UNITY_EDITOR          
-        UpdateHealthBar();
-#endif
+
     }
 
-    public void TakeDamage()
-    {
-        if (isDead) return;
-
-        currentSegment = Mathf.Max(0, currentSegment - 1);
-        UpdateHealthBar();
-
-        if (currentSegment > 0)
-        {
-            anim.SetTrigger("isHurt");
-        }
-        else
-        {
-            Die();
-        }
-    }
+  
 
     public void OnDisappearAnimationComplete()
     {
+        //if (isDead || isInCutscene) return;
         if (teleportPoints != null && teleportPoints.Length > 1)
         {
+            
            TeleportToNewPoint();
         }
 
@@ -101,6 +98,7 @@ public class BossController : MonoBehaviour
 
     private void TeleportToNewPoint()
     {
+        if (isDead || isInCutscene) return;
         if (teleportPoints != null && teleportPoints.Length > 1)
         {
             int index;
@@ -132,5 +130,34 @@ public class BossController : MonoBehaviour
         {
             transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
         }
+    }
+
+    public void TakeDamage(float damage)
+    {
+        if (isDead || isInvulnerable || isInCutscene) return;
+        currentSegment -= damage; 
+        anim.SetTrigger("isHurt");
+        UpdateHealthBar();
+        if (currentSegment <= 0f)
+        {
+            Die(); 
+        }
+        else
+        {
+            StartCoroutine(InvulnerabilityCoroutine());
+        }
+    }
+
+    private IEnumerator InvulnerabilityCoroutine()
+    {
+        isInvulnerable = true;
+        yield return new WaitForSeconds(invulnerableTime);
+        isInvulnerable = false;
+    }
+
+    void ShootFireball()
+    {
+        GameObject fb = Instantiate(fireballPrefab, firePoint.position, Quaternion.identity);
+        fb.GetComponent<Fireball>().target = player.gameObject;
     }
 }

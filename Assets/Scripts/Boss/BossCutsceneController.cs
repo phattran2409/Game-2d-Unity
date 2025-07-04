@@ -7,6 +7,9 @@ public class BossCutsceneController : MonoBehaviour
     public GameObject bossHealthBar;
     public GameObject bossAI;
     public AudioSource bossMusic;
+    public BossController bossController;
+
+
 
     public CinemachineCamera mainCam;
     public CinemachineCamera bossCam;
@@ -14,7 +17,7 @@ public class BossCutsceneController : MonoBehaviour
 
     void Start()
     {
-        
+        bossController.isInCutscene = true;
         bossHealthBar.SetActive(false);
     }
     public void StartCameraShake()
@@ -44,6 +47,6 @@ public class BossCutsceneController : MonoBehaviour
         bossCam.Priority = 0;
         mainCam.Priority = 10;
         player.GetComponent<PlayerController>().enabled = true;
-        
+        bossController.isInCutscene = false;
     }
 }

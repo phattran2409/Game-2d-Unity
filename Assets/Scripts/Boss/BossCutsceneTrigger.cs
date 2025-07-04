@@ -9,6 +9,7 @@ public class BossCutsceneTrigger : MonoBehaviour
     public CinemachineCamera bossCam;
     public CinemachineCamera mainCam;
 
+
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
