@@ -38,6 +38,10 @@ public class PlayerLadderClimb : MonoBehaviour
 
     void Update()
     {
+        if (moveInput == null)
+        {
+            Debug.LogError("moveInput is null. Ensure InputSystem_Actions is set up correctly.");   
+        }
         moveInput = inputActions.Player.Move.ReadValue<Vector2>();
         float vertical = moveInput.y;
 

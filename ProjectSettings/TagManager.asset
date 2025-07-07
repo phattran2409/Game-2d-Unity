@@ -11,6 +11,7 @@ TagManager:
   - Gems
   - CheckPoint_End
   - Heart
+  - Ladder
   layers:
   - Default
   - TransparentFX

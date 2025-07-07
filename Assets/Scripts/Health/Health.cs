@@ -27,7 +27,7 @@ public class Health : MonoBehaviour
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, startingHealth);
         if (currentHealth > 0 && anim != null)
         {
-            anim.SetTrigger("Heal");
+            anim.SetTrigger("Heal");    
         }
     }
 

@@ -4,6 +4,7 @@ using UnityEngine;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine.InputSystem;
+using Unity.VisualScripting;
 
 public class PlayerController : MonoBehaviour
 {
@@ -16,8 +17,6 @@ public class PlayerController : MonoBehaviour
     public Transform groundCheck;
     public LayerMask groundLayer;
     public Animator anim;
-    public Collider2D coll;
-    public GameObject collectEffect;
 
     [Header("Force Knock")]
     public float knockBackForce = 10f;
@@ -56,7 +55,6 @@ public class PlayerController : MonoBehaviour
             transform.position = startPoint.transform.position;
         }
         anim = GetComponent<Animator>();
-        coll = GetComponent<Collider2D>();
         health = GetComponent<Health>();
         climbScript = GetComponent<PlayerLadderClimb>();
     }
@@ -140,6 +138,7 @@ public class PlayerController : MonoBehaviour
         horizontal = context.ReadValue<Vector2>().x;
     }
 
+  
     public void Jump(InputAction.CallbackContext context)
     {
         if (health.Dead) return;

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Assets.Scripts;
 using UnityEngine;
 
-public class Enemies : MonoBehaviour , IDamageable 
+public class Enemies : MonoBehaviour  
 {
      [Header("Cached Components")]
     //public bear bearScript;
@@ -41,10 +41,7 @@ public class Enemies : MonoBehaviour , IDamageable
 		Destroy(gameObject, time);
 	}
 
-	public void TakeDamage(float damage)
-	{
-		throw new System.NotImplementedException();
-	}
+	
     public IEnumerator KnockBackThenResume(Vector2 direction, float distance, float duration , Vector3 target , Transform pointA , Transform pointB)
     {
         Vector3 originalTarget = target; // lưu lại hướng ban đầu

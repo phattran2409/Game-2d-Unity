@@ -13,17 +13,25 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField] private Transform attackPoint; // vị trí đánh
     [SerializeField] private LayerMask enemyLayer;
     [SerializeField] public  GameObject AttackPrefab;
+    [SerializeField] public Transform spawnWeapon;
+    
+    public GameObject bowObject;
     private Animator anim;
     private PlayerController player; 
-    private void Start()
+    private  PlayerArrowIventory playerArrowIventory;
+	private void Start()
     {
         anim = GetComponent<Animator>();
-        player = GetComponent<PlayerController>();  
-    }
+        player = GetComponent<PlayerController>();
+        bowObject.SetActive(false);
+	}
 
     void Update()
     {
-        
+        //if (player.attackTimer <= 1f)
+        //{
+        //    bowObject.SetActive(false);
+        //}
     }
 
     public void OnAttack(InputAction.CallbackContext context)
@@ -38,6 +46,33 @@ public class PlayerAttack : MonoBehaviour
             Invoke(nameof(DoDamage), 0.1f);
         }
     }
+
+        public void Shoot(InputAction.CallbackContext context)
+        {
+            if (bowObject == null)
+            {
+                Debug.LogError("Bow object is not assigned!");
+                return;
+            }
+            bowObject.SetActive(true);
+        
+                playerArrowIventory = GetComponent<PlayerArrowIventory>();  
+		    if (context.performed && player.attackTimer <= 0f)
+                {
+                if (playerArrowIventory.TryUseArrow())
+                {
+
+                    player.attackTimer = player.attackCooldown;
+                    Quaternion rotation = transform.rotation;
+                    anim.SetTrigger("isShoot");
+                    bowObject.GetComponent<Bow>()?.StartShoot();
+
+                    Debug.Log("Player attacked!");
+                }
+
+                }
+         
+        }
 
 
     void DoDamage()
@@ -76,5 +111,7 @@ public class PlayerAttack : MonoBehaviour
     }
 
 
-   
+  
+
+    
 }
