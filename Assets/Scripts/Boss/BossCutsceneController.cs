@@ -5,9 +5,9 @@ public class BossCutsceneController : MonoBehaviour
 {
     public GameObject player;
     public GameObject bossHealthBar;
-    public GameObject bossAI;
     public AudioSource bossMusic;
     public BossController bossController;
+    public BossArrowIndicator bossArrowIndicator;
 
 
 
@@ -18,6 +18,7 @@ public class BossCutsceneController : MonoBehaviour
     void Start()
     {
         bossController.isInCutscene = true;
+        bossArrowIndicator.isInCutscene = true;
         bossHealthBar.SetActive(false);
     }
     public void StartCameraShake()
@@ -37,10 +38,6 @@ public class BossCutsceneController : MonoBehaviour
         bossHealthBar.SetActive(true);
     }
 
-    public void EnableBossAI()
-    {
-        bossAI.SetActive(true);
-    }
 
     public void EndCutscene()
     {
@@ -48,5 +45,6 @@ public class BossCutsceneController : MonoBehaviour
         mainCam.Priority = 10;
         player.GetComponent<PlayerController>().enabled = true;
         bossController.isInCutscene = false;
+        bossArrowIndicator.isInCutscene = false;
     }
 }
