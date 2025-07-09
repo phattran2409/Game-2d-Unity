@@ -28,6 +28,11 @@ public class BossArrowIndicator : MonoBehaviour
 
     void Update()
     {
+        if (player == null || boss == null || mainCamera == null)
+        {
+            Debug.LogWarning("Player, Boss or Main Camera is not assigned.");
+            return;
+        }
         if (isInCutscene)
         {
             arrow.enabled = false;

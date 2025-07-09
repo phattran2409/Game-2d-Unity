@@ -14,8 +14,7 @@ public class BossController : Boss, IDamageable
     private bool isInvulnerable = false; 
     public float invulnerableTime = 3f;
 
-    [Header("UI Components")]
-    public BossHealthBar healthBarUI;
+    private BossHealthBar healthBarUI;
 
     [Header("Teleportation Settings")]
     public Transform[] teleportPoints;
@@ -40,7 +39,7 @@ public class BossController : Boss, IDamageable
     public float meleeCooldown = 3f;
     private float meleeTimer;
 
-
+    public GameObject checkpointPrefab;
     private void Awake()
     {
         anim = GetComponent<Animator>();
@@ -53,6 +52,12 @@ public class BossController : Boss, IDamageable
         }
     }
 
+    public void SetHealthBar(BossHealthBar bar)
+    {
+        healthBarUI = bar;
+        healthBarUI.Setup(totalSegments);
+        healthBarUI.SetHealth(currentSegment);
+    }
     private void Update()
     {
         if (isDead || isInCutscene) return;
@@ -126,9 +131,16 @@ public class BossController : Boss, IDamageable
     {
         isDead = true;
         //anim.SetBool("isDead", true);
-        anim.SetTrigger("Dead");
-
+        anim.SetTrigger("Dead");     
         Destroy(gameObject, 2f);
+    }
+
+    public void EndCheckpoint()
+    {
+        if (checkpointPrefab != null)
+        {
+            Instantiate(checkpointPrefab, transform.position + new Vector3(0, 1, 0), Quaternion.identity);
+        }
     }
 
     private void UpdateHealthBar()
