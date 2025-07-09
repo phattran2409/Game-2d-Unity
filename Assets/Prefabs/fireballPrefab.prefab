@@ -169,6 +169,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   launchHeight: 3
   target: {fileID: 0}
+  explosionRadius: 2
+  damage: 1
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!95 &7897798574142627352
 Animator:
   serializedVersion: 7

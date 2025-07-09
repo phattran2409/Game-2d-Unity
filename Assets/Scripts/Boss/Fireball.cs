@@ -8,6 +8,11 @@ public class Fireball : MonoBehaviour
     private Animator anim;
     private bool hasExploded = false;
 
+    [Header("Explosion Settings")]
+    public float explosionRadius = 2f;
+    public float damage = 1f;
+    public LayerMask playerLayer; 
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -68,12 +73,27 @@ public class Fireball : MonoBehaviour
 
     void Explode()
     {
+        if (hasExploded) return;
+
         hasExploded = true;
         rb.linearVelocity = Vector2.zero;
         rb.isKinematic = true;
         GetComponent<Collider2D>().enabled = false;
+
         anim.SetTrigger("Explode");
+
+      
+        Collider2D hit = Physics2D.OverlapCircle(transform.position, explosionRadius, playerLayer);
+        if (hit != null && hit.CompareTag("Player"))
+        {
+            Health playerHealth = hit.GetComponent<Health>();
+            if (playerHealth != null)
+            {
+                playerHealth.TakeDamage_1(damage, transform.position); 
+            }
+        }
     }
+
 
     public void DestroySelf()
     {

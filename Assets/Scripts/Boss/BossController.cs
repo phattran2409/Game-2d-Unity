@@ -34,6 +34,13 @@ public class BossController : Boss, IDamageable
     public Transform player;
     private Animator anim;
 
+    [Header("Melee Attack Settings")]
+    public float meleeAttackRange = 3f;
+    public float meleeDamage = 1f;
+    public float meleeCooldown = 3f;
+    private float meleeTimer;
+
+
     private void Awake()
     {
         anim = GetComponent<Animator>();
@@ -53,18 +60,54 @@ public class BossController : Boss, IDamageable
         // Update health bar
         UpdateHealthBar();
         // Auto attack logic
-        attackTimer -= Time.deltaTime;
-        if (attackTimer <= 0f)
-        {
-            anim.SetTrigger("isAttacking");
-            ShootFireball();
-            attackTimer = attackCooldown;
-        }
+        float distanceToPlayer = Vector2.Distance(transform.position, player.position);
 
+        attackTimer -= Time.deltaTime;
+        meleeTimer -= Time.deltaTime;
+
+       
+        if (distanceToPlayer <= meleeAttackRange)
+        {
+            if (meleeTimer <= 0f)
+            {
+
+                FlipToFacePlayer();
+                MeleeAttack();
+                if (anim.GetCurrentAnimatorStateInfo(0).IsTag("Attack_2"))
+                    return;
+
+                meleeTimer = meleeCooldown;
+                attackTimer = attackCooldown;
+            }
+        }
+        else
+        {
+          
+            if (attackTimer <= 0f)
+            {
+                FlipToFacePlayer();
+                anim.SetTrigger("isAttacking");
+                ShootFireball();
+                attackTimer = attackCooldown;
+            }
+        }
 
     }
 
-  
+
+    void MeleeAttack()
+    {
+        anim.SetTrigger("isMeleeAttacking");
+
+        Health playerHealth = player.GetComponent<Health>();
+        if (playerHealth != null)
+        {
+            playerHealth.TakeDamage_1(meleeDamage, transform.position); 
+        }
+    }
+
+
+
 
     public void OnDisappearAnimationComplete()
     {
@@ -122,14 +165,14 @@ public class BossController : Boss, IDamageable
             Debug.LogWarning("No teleport points assigned.");
         }
 
-        if (transform.position.x < 0)
-        {
-            transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
-        }
-        else
-        {
-            transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
-        }
+        //if (transform.position.x < 0)
+        //{
+        //    transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+        //}
+        //else
+        //{
+        //    transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+        //}
     }
 
     public void TakeDamage(float damage)
@@ -160,4 +203,15 @@ public class BossController : Boss, IDamageable
         GameObject fb = Instantiate(fireballPrefab, firePoint.position, Quaternion.identity);
         fb.GetComponent<Fireball>().target = player.gameObject;
     }
+
+    void FlipToFacePlayer()
+    {
+        if (player == null) return;
+
+        if (player.position.x > transform.position.x)
+            transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z); 
+        else
+            transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);  
+    }
+
 }
