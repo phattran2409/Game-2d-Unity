@@ -71,14 +71,14 @@ public class PlayerController : MonoBehaviour
 
         // ➤ Animation
         if (grounded)
-        {
+        {   
             anim.SetFloat("Speed", Mathf.Abs(horizontal));
         }
         else if (!grounded && rb.linearVelocity.y > 0.1f && climbScript.isOnLadder == false)
         {
             anim.SetBool("isJumping", true);
         }
-        else
+        else if (rb.linearVelocity.y <= 0f || grounded)
         {
             anim.SetBool("isJumping", false);
         }
@@ -114,9 +114,9 @@ public class PlayerController : MonoBehaviour
     {
         bool grounded = IsGrounded();
         float yVelocity = rb.linearVelocity.y;
-
-        if (!grounded && yVelocity < -0.1f)
-        {
+        
+        if (!grounded && yVelocity <= -0.1f  )
+        { 
             ChangeState(PlayerState.land);
         }
         else if (grounded)
@@ -203,8 +203,9 @@ public class PlayerController : MonoBehaviour
             Destroy(other.gameObject);
             health.IncreaseHealth(1f);
             GameObject effect = Instantiate(effectHealth, transform.position, Quaternion.identity);
+            Debug.Log("Health effect instantiated at: " + transform.position);
             effect.transform.SetParent(transform);
-            Destroy(effect, 1f);    
+            Destroy(effect, 2f);    
             Debug.Log("Health increased. Current health: " + health.currentHealth);
         }
     }

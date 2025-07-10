@@ -47,7 +47,7 @@ public class bear : MonoBehaviour
         };  
         if (!enemyMovement.isChasing)
         {
-            Debug.Log("Bear is patrolling");   
+              
             anim.SetTrigger("walk");  
             rb.linearVelocity = new Vector2(moveSpeed * (enemyMovement.movingRight ? 1 : -1), rb.linearVelocity.y);
             RaycastHit2D groundInfo = Physics2D.Raycast(groundCheck.position, Vector2.down, groundCheckDistance, groundLayer);

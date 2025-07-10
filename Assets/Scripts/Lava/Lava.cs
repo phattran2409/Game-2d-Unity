@@ -7,6 +7,7 @@ public class Lava : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            Debug.Log("Player entered lava");
             collision.GetComponent<Health>().Die();
         }
     }
