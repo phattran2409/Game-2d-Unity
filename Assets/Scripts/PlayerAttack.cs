@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Assets.Scripts;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class PlayerAttack : MonoBehaviour
 {
@@ -14,12 +15,16 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField] private LayerMask enemyLayer;
     [SerializeField] public  GameObject AttackPrefab;
     [SerializeField] public Transform spawnWeapon;
-    
+    [SerializeField] private TMPro.TMP_Text warningText;
+    [SerializeField] private GameObject messagePanel;
+
+
     public GameObject bowObject;
     private Animator anim;
     private PlayerController player; 
     private  PlayerArrowIventory playerArrowIventory;
-	private void Start()
+    private Coroutine warningRoutine;
+    private void Start()
     {
         anim = GetComponent<Animator>();
         player = GetComponent<PlayerController>();
@@ -49,7 +54,14 @@ public class PlayerAttack : MonoBehaviour
 
         public void Shoot(InputAction.CallbackContext context)
         {
-            if (bowObject == null)
+            string currentScene = SceneManager.GetActiveScene().name;
+            if (currentScene == "SceneState1")
+                {
+                    Debug.LogWarning("Cannot shoot in this scene!");
+                      ShowSceneWarning("Cannot shoot in this scene!");
+                    return;
+                }
+        if (bowObject == null)
             {
                 Debug.LogError("Bow object is not assigned!");
                 return;
@@ -111,7 +123,23 @@ public class PlayerAttack : MonoBehaviour
     }
 
 
-  
 
-    
+    private void ShowSceneWarning(string message)
+    {
+        if (warningText == null || messagePanel == null) return;
+
+        if (warningRoutine != null)
+            StopCoroutine(warningRoutine);
+
+        warningRoutine = StartCoroutine(ShowWarningRoutine(message));
+    }
+
+    private IEnumerator ShowWarningRoutine(string message)
+    {
+        warningText.text = message;
+        messagePanel.SetActive(true);
+        yield return new WaitForSeconds(2f);
+        messagePanel.SetActive(false);  
+    }
+
 }
