@@ -1,88 +1,52 @@
 fileFormatVersion: 2
-guid: ad3dd4eb6f1c73c4baeb94dba61cd28f
+guid: 51361d36e7d61e048a8c68ecbd055567
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2621414957121383870
-    second: fireball_explosion_0
+      213: 6230913906377056430
+    second: dragon_knight_attack_1_0
   - first:
-      213: 643837946843794155
-    second: fireball_explosion_1
+      213: 7104186386418224321
+    second: dragon_knight_attack_1_1
   - first:
-      213: -6091314861127821089
-    second: fireball_explosion_2
+      213: -5386252545260973376
+    second: dragon_knight_attack_1_2
   - first:
-      213: -4215731473008590383
-    second: fireball_explosion_3
+      213: 3472836538407496607
+    second: dragon_knight_attack_1_3
   - first:
-      213: -9021707753751326251
-    second: fireball_explosion_4
+      213: 8129864378910208737
+    second: dragon_knight_attack_1_4
   - first:
-      213: -4055916458808057247
-    second: fireball_explosion_5
+      213: 6153372148580745868
+    second: dragon_knight_attack_1_5
   - first:
-      213: -6948188568926718582
-    second: fireball_explosion_6
+      213: -3976545633791491527
+    second: dragon_knight_attack_1_6
   - first:
-      213: -5308442243043500618
-    second: fireball_explosion_7
+      213: -5885096835646165031
+    second: dragon_knight_attack_1_7
   - first:
-      213: 995424792117928437
-    second: fireball_explosion_8
+      213: -8685288944552884470
+    second: dragon_knight_attack_1_8
   - first:
-      213: 7876276389567592805
-    second: fireball_explosion_9
+      213: -3312447689163395969
+    second: dragon_knight_attack_1_9
   - first:
-      213: 4506450324946923819
-    second: fireball_explosion_10
+      213: -1732819129711378283
+    second: dragon_knight_attack_1_10
   - first:
-      213: -170836949179078028
-    second: fireball_explosion_11
+      213: 6136706643784237844
+    second: dragon_knight_attack_1_11
   - first:
-      213: -3172671374633145086
-    second: fireball_explosion_12
+      213: 2830597081458887194
+    second: dragon_knight_attack_1_12
   - first:
-      213: -578212726076243484
-    second: fireball_explosion_13
+      213: -8001807414642581669
+    second: dragon_knight_attack_1_13
   - first:
-      213: 8937873245380805464
-    second: fireball_explosion_14
-  - first:
-      213: 7297079618510340347
-    second: fireball_explosion_15
-  - first:
-      213: -8600850925794871824
-    second: fireball_explosion_16
-  - first:
-      213: 578871692770223582
-    second: fireball_explosion_17
-  - first:
-      213: 8595053928178382261
-    second: fireball_explosion_18
-  - first:
-      213: -7233414189078441665
-    second: fireball_explosion_19
-  - first:
-      213: 5265602318998502790
-    second: fireball_explosion_20
-  - first:
-      213: 7633756142067886156
-    second: fireball_explosion_21
-  - first:
-      213: -3476621262483874210
-    second: fireball_explosion_22
-  - first:
-      213: -7831579235958422670
-    second: fireball_explosion_23
-  - first:
-      213: 4283112689065604587
-    second: fireball_explosion_24
-  - first:
-      213: -2624265630269385289
-    second: fireball_explosion_25
-  - first:
-      213: 3296028829272486740
-    second: fireball_explosion_26
+      213: -3889584768411642208
+    second: dragon_knight_attack_1_14
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -115,7 +79,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -150,7 +114,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 16384
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -178,13 +142,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: fireball_explosion_6
+      name: dragon_knight_attack_1_7
       rect:
         serializedVersion: 2
-        x: 1100
+        x: 65
         y: 0
-        width: 192
-        height: 112
+        width: 155
+        height: 75
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -193,20 +157,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a8571b44f43139f90800000000000000
-      internalID: -6948188568926718582
+      spriteID: 9dfe88acb9fe35ea0800000000000000
+      internalID: -5885096835646165031
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fireball_explosion_13
+      name: dragon_knight_attack_1_8
       rect:
         serializedVersion: 2
-        x: 1986
-        y: 0
-        width: 361
-        height: 143
+        x: 545
+        y: 2
+        width: 175
+        height: 75
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -215,20 +179,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4e18d91d696c9f7f0800000000000000
-      internalID: -578212726076243484
+      spriteID: a074c48b8b7a77780800000000000000
+      internalID: -8685288944552884470
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fireball_explosion_14
+      name: dragon_knight_attack_1_9
       rect:
         serializedVersion: 2
-        x: 664
+        x: 1060
         y: 0
-        width: 107
-        height: 56
+        width: 195
+        height: 75
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -237,20 +201,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 853046e9c54b90c70800000000000000
-      internalID: 8937873245380805464
+      spriteID: f7c2a567062d702d0800000000000000
+      internalID: -3312447689163395969
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fireball_explosion_20
+      name: dragon_knight_attack_1_10
       rect:
         serializedVersion: 2
-        x: 204
+        x: 1540
         y: 0
-        width: 72
-        height: 41
+        width: 200
+        height: 96
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -259,20 +223,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 68df068296d231940800000000000000
-      internalID: 5265602318998502790
+      spriteID: 5904d81be2ac3f7e0800000000000000
+      internalID: -1732819129711378283
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fireball_explosion_23
+      name: dragon_knight_attack_1_11
       rect:
         serializedVersion: 2
-        x: 1559
+        x: 2020
         y: 0
-        width: 269
-        height: 123
+        width: 235
+        height: 107
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -281,8 +245,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2738f5aad24a05390800000000000000
-      internalID: -7831579235958422670
+      spriteID: 4130a89cd26f92550800000000000000
+      internalID: 6136706643784237844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_knight_attack_1_13
+      rect:
+        serializedVersion: 2
+        x: 2500
+        y: 0
+        width: 175
+        height: 75
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5f54214d8ed3f090800000000000000
+      internalID: -8001807414642581669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_knight_attack_1_12
+      rect:
+        serializedVersion: 2
+        x: 2235
+        y: 65
+        width: 5
+        height: 5
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c1f37741abe7644f84b1ef30bda6783
+      internalID: 492474045
       vertices: []
       indices: 
       edges: []
@@ -291,7 +299,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: c1dd5517fb4a1014ba092b13c4f8a6ee
+    spriteID: 0c56d54a0e6d71543b2e7961842eee9b
     internalID: 0
     vertices: []
     indices: 
@@ -299,35 +307,25 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":7,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      fireball_explosion_0: 2621414957121383870
-      fireball_explosion_1: 643837946843794155
-      fireball_explosion_10: 4506450324946923819
-      fireball_explosion_11: -170836949179078028
-      fireball_explosion_12: -3172671374633145086
-      fireball_explosion_13: -578212726076243484
-      fireball_explosion_14: 8937873245380805464
-      fireball_explosion_15: 7297079618510340347
-      fireball_explosion_16: -8600850925794871824
-      fireball_explosion_17: 578871692770223582
-      fireball_explosion_18: 8595053928178382261
-      fireball_explosion_19: -7233414189078441665
-      fireball_explosion_2: -6091314861127821089
-      fireball_explosion_20: 5265602318998502790
-      fireball_explosion_21: 7633756142067886156
-      fireball_explosion_22: -3476621262483874210
-      fireball_explosion_23: -7831579235958422670
-      fireball_explosion_24: 4283112689065604587
-      fireball_explosion_25: -2624265630269385289
-      fireball_explosion_26: 3296028829272486740
-      fireball_explosion_3: -4215731473008590383
-      fireball_explosion_4: -9021707753751326251
-      fireball_explosion_5: -4055916458808057247
-      fireball_explosion_6: -6948188568926718582
-      fireball_explosion_7: -5308442243043500618
-      fireball_explosion_8: 995424792117928437
-      fireball_explosion_9: 7876276389567592805
+      dragon_knight_attack_1_0: -160040743
+      dragon_knight_attack_1_1: 1473943910
+      dragon_knight_attack_1_10: -1732819129711378283
+      dragon_knight_attack_1_11: 6136706643784237844
+      dragon_knight_attack_1_12: 492474045
+      dragon_knight_attack_1_13: -8001807414642581669
+      dragon_knight_attack_1_14: 705781870
+      dragon_knight_attack_1_2: -2053653374
+      dragon_knight_attack_1_3: 1265715737
+      dragon_knight_attack_1_4: 1874892923
+      dragon_knight_attack_1_5: -436912052
+      dragon_knight_attack_1_6: 1675851721
+      dragon_knight_attack_1_7: -5885096835646165031
+      dragon_knight_attack_1_8: -8685288944552884470
+      dragon_knight_attack_1_9: -3312447689163395969
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

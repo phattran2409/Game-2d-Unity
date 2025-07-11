@@ -104,6 +104,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   damage: 1
+  hitLayer:
+    serializedVersion: 2
+    m_Bits: 320
   impactEffect: {fileID: 0}
   hitEnemy:
     serializedVersion: 2

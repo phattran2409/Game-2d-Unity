@@ -12,6 +12,7 @@ TagManager:
   - CheckPoint_End
   - Heart
   - Ladder
+  - Wall
   layers:
   - Default
   - TransparentFX

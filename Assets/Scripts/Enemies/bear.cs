@@ -1,7 +1,8 @@
-﻿using System;
+﻿using Assets.Scripts;
+using System;
 using UnityEngine;
 
-public class bear : MonoBehaviour
+public class bear : MonoBehaviour , IDamageable
 {
 
 
@@ -84,18 +85,18 @@ public class bear : MonoBehaviour
         transform.localScale = scaler;
     }
 
-    public void TakeDamage(int damage)
-    {
-        Debug.Log("Enemy took damage: " + damage);
-        anim.SetTrigger("Hurt");
-        currentHealth -= damage;
-        if (currentHealth <= 0)
-        {
-            isDead = true;      
-            anim.SetTrigger("Dead");
-            Die();
-        }
-    }
+    //public void TakeDamage(int damage)
+    //{
+    //    Debug.Log("Enemy took damage: " + damage);
+    //    anim.SetTrigger("Hurt");
+    //    currentHealth -= damage;
+    //    if (currentHealth <= 0)
+    //    {
+    //        isDead = true;      
+    //        anim.SetTrigger("Dead");
+    //        Die();
+    //    }
+    //}
 
     public void Die()
     {
@@ -125,6 +126,20 @@ public class bear : MonoBehaviour
                 Debug.LogError("enemyAttack is null!");
                 
             }
+        }
+    }
+
+    public void TakeDamage(float damage)
+    {
+        Debug.Log("Enemy took damage: " + damage);
+        anim.SetTrigger("Hurt");    
+         int damageInt = Mathf.FloorToInt(damage); // Chuyển đổi float sang int 
+        currentHealth -= damageInt;
+        if (currentHealth <= 0)
+        {
+            isDead = true;
+            anim.SetTrigger("Dead");
+            Die();
         }
     }
 }

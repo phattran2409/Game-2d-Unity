@@ -5,7 +5,8 @@ using UnityEngine;
 public class Arrow : MonoBehaviour
 {
     [SerializeField] public float speed = 10f;
-    [SerializeField] public int damage = 1;
+    [SerializeField] public float damage = 1f;
+    [SerializeField] public LayerMask hitLayer;
 
     private Rigidbody2D rb;
     public GameObject impactEffect;
@@ -55,24 +56,30 @@ public class Arrow : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        IDamageable target = collision.GetComponent<IDamageable>();
-        if (target != null)
-        {
-            target.TakeDamage(damage);
+        int objLayer = collision.gameObject.layer;
+
+        if(((1 << objLayer) & hitLayer) != 0) { 
+            Debug.Log("Hit something in Ground or Enemy layer");
+
+            IDamageable target = collision.GetComponent<IDamageable>();
+            if (target != null)
+            {
+                target.TakeDamage(damage);
+            }
+
+            if (impactEffect != null)
+            {
+                Instantiate(impactEffect, transform.position, Quaternion.identity);
+            }
+
+            // 3. Tùy chọn: gắn tên vào đối tượng bị dính (ví dụ tường)
+            rb.linearVelocity = Vector2.zero;
+            rb.bodyType = RigidbodyType2D.Kinematic;
+            GetComponent<Collider2D>().enabled = false;
+            transform.SetParent(collision.transform);
+
+            Destroy(gameObject, 2f); // tự hủy sau 2s
         }
-
-        if (impactEffect != null)
-        {
-            Instantiate(impactEffect, transform.position, Quaternion.identity);
-        }
-
-        // 3. Tùy chọn: gắn tên vào đối tượng bị dính (ví dụ tường)
-        rb.linearVelocity = Vector2.zero;
-        rb.bodyType = RigidbodyType2D.Kinematic;
-        GetComponent<Collider2D>().enabled = false;
-        transform.SetParent(collision.transform);
-
-        Destroy(gameObject, 2f); // tự hủy sau 2s
     }
 
     private void OnEnable()
