@@ -7,6 +7,10 @@ public class GameManager : MonoBehaviour
     private GameObject instancePrefab;
     public bool reachedEndCheckpoint = false;
 
+    [Header("Audio")]
+    public AudioClip victorySound;             
+    private AudioSource sfxAudioSource;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
     private void Awake()
@@ -15,6 +19,8 @@ public class GameManager : MonoBehaviour
         {
             instance = this;
             DontDestroyOnLoad(gameObject);
+
+            sfxAudioSource = gameObject.AddComponent<AudioSource>();
         }
         else
         {
@@ -25,6 +31,12 @@ public class GameManager : MonoBehaviour
     public void ReachEndCheckpoint()
     {
         reachedEndCheckpoint = true;
+
+        if (victorySound != null && sfxAudioSource != null)
+        {
+            sfxAudioSource.PlayOneShot(victorySound);
+        }
+
         Time.timeScale = 0f; 
         instancePrefab = Instantiate(completePanel, FindObjectOfType<Canvas>().transform);
         Debug.Log("End checkpoint reached!");

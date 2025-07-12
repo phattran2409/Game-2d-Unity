@@ -13,6 +13,7 @@ TagManager:
   - Heart
   - Ladder
   - Wall
+  - Audio
   layers:
   - Default
   - TransparentFX

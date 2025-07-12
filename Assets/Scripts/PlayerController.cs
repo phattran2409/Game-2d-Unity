@@ -46,6 +46,13 @@ public class PlayerController : MonoBehaviour
     [Header("Buffer time JUMP")]
     [SerializeField] private float jumpBufferTime = 0.2f;
     private float jumpBufferCounter;
+    [Header("Audio")]
+    public AudioClip jumpSound;
+    public AudioClip stepLoopSound;
+    public AudioClip collectFruitSound; 
+    public AudioClip collectGemSound;
+    private AudioSource stepAudioSource;  
+    private AudioSource sfxAudioSource;   
 
     void Start()
     {
@@ -54,9 +61,25 @@ public class PlayerController : MonoBehaviour
         {
             transform.position = startPoint.transform.position;
         }
+
         anim = GetComponent<Animator>();
         health = GetComponent<Health>();
         climbScript = GetComponent<PlayerLadderClimb>();
+
+        // Setup 2 audio sources
+        AudioSource[] sources = GetComponents<AudioSource>();
+        if (sources.Length >= 2)
+        {
+            stepAudioSource = sources[0];
+            sfxAudioSource = sources[1];
+        }
+        else
+        {
+            stepAudioSource = gameObject.AddComponent<AudioSource>();
+            sfxAudioSource = gameObject.AddComponent<AudioSource>();
+        }
+
+        stepAudioSource.loop = true;
     }
 
     void Update()
@@ -142,11 +165,21 @@ public class PlayerController : MonoBehaviour
     public void Jump(InputAction.CallbackContext context)
     {
         if (health.Dead) return;
-
-
-        if (context.performed)
+        
+        if (context.performed && IsGrounded())
         {
             jumpBufferCounter = jumpBufferTime;
+            //rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+
+            if (jumpSound != null && sfxAudioSource != null)
+            {
+                Debug.Log("Jump sound played");
+                sfxAudioSource.PlayOneShot(jumpSound);
+            }
+            else
+            {
+                Debug.LogWarning("JumpSound or sfxAudioSource is NULL");
+            }
         }
 
         if (context.canceled && rb.linearVelocity.y > 0f)
@@ -173,7 +206,6 @@ public class PlayerController : MonoBehaviour
         Vector2 knockbackDirection = (transform.position - (Vector3)attackerPos).normalized;
         float knockDirectionX = MathF.Sign(knockbackDirection.x);
         Vector2 force = new Vector2(knockDirectionX, knockBackForce) * knockBackUpWard;
-
         rb.linearVelocity = Vector2.zero;
         rb.AddForce(force, ForceMode2D.Impulse);
     }
@@ -188,6 +220,11 @@ public class PlayerController : MonoBehaviour
             cherries += 1;
             cherryText.text = ": " + cherries.ToString();
             Debug.Log("Cherries collected: " + cherries);
+
+            if (collectFruitSound != null && sfxAudioSource != null)
+            {
+                sfxAudioSource.PlayOneShot(collectFruitSound);
+            }
         }
 
         if (other.CompareTag("Gems"))
@@ -196,6 +233,11 @@ public class PlayerController : MonoBehaviour
             gems += 1;
             gemText.text = ": " + gems.ToString();
             Debug.Log("Gems collected: " + gems);
+
+            if (collectGemSound != null && sfxAudioSource != null)
+            {
+                sfxAudioSource.PlayOneShot(collectGemSound);
+            }
         }
 
         if (other.CompareTag("Heart"))
@@ -210,10 +252,12 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         grounded = IsGrounded();
         Debug.Log("Player collided with: " + collision.gameObject.name);
     }
-}
 
+    public AudioSource SfxAudioSource => sfxAudioSource;
+}
