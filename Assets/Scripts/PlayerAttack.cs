@@ -48,7 +48,7 @@ public class PlayerAttack : MonoBehaviour
 
     public void OnAttack(InputAction.CallbackContext context)
     {
-
+        audioSource = GetComponent<AudioSource>();
         if (context.performed && player.attackTimer <= 0)
         {
             player.attackTimer = player.attackCooldown;
