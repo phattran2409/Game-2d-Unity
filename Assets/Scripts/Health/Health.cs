@@ -94,6 +94,16 @@ public class Health : MonoBehaviour
         currentHealth = 0f;
         anim.SetTrigger("Die");
 
+        GameObject musicObj = GameObject.Find("Music");
+        if (musicObj != null)
+        {
+            AudioSource musicAudio = musicObj.GetComponent<AudioSource>();
+            if (musicAudio != null)
+            {
+                musicAudio.Stop();
+            }
+        }
+
         if (gameOverSound != null && playerController != null && playerController.SfxAudioSource != null)
         {
             playerController.SfxAudioSource.PlayOneShot(gameOverSound);

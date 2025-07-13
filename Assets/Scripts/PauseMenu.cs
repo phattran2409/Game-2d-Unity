@@ -8,10 +8,16 @@ public class PauseMenu : MonoBehaviour
     private bool isPaused = false;
 
     private InputSystem_Actions inputActions;
-
+    private AudioSource musicAudio;
     void Start()
     {
-        pausePanel.SetActive(false); 
+        pausePanel.SetActive(false);
+
+        GameObject musicObj = GameObject.Find("Music");
+        if (musicObj != null)
+        {
+            musicAudio = musicObj.GetComponent<AudioSource>();
+        }
     }
 
     private void Awake()
@@ -35,6 +41,14 @@ public class PauseMenu : MonoBehaviour
         isPaused = !isPaused;
         pausePanel.SetActive(isPaused);
         Time.timeScale = isPaused ? 0f : 1f;
+
+        if (musicAudio != null)
+        {
+            if (isPaused)
+                musicAudio.Pause(); 
+            else
+                musicAudio.UnPause(); 
+        }
     }
 
     public void ResumeGame()

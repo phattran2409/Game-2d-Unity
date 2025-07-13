@@ -9,7 +9,8 @@ public class Fireball : MonoBehaviour
     private bool hasExploded = false;
 
     public Vector2 targetPosition;
-
+    public AudioClip explodeSound; 
+    private AudioSource audioSource;
 
     [Header("Explosion Settings")]
     public float explosionRadius = 2f;
@@ -18,6 +19,7 @@ public class Fireball : MonoBehaviour
 
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         LaunchParabolic(targetPosition);
@@ -99,6 +101,11 @@ public class Fireball : MonoBehaviour
         rb.linearVelocity = Vector2.zero;
         rb.isKinematic = true;
         GetComponent<Collider2D>().enabled = false;
+
+        if (explodeSound != null && audioSource != null)
+        {
+            audioSource.PlayOneShot(explodeSound);
+        }
 
         anim.SetTrigger("Explode");
 

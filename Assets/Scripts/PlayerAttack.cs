@@ -19,6 +19,7 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField] private GameObject messagePanel;
     [SerializeField] private float knockbackForce = 2f; // Lực đẩy khi đánh trúng
     [SerializeField] private AudioClip attackSound; // Âm thanh đánh
+    [SerializeField] private AudioClip bowShootSound; 
 
 
     public GameObject bowObject;
@@ -33,7 +34,6 @@ public class PlayerAttack : MonoBehaviour
         anim = GetComponent<Animator>();
         player = GetComponent<PlayerController>();
         bowObject.SetActive(false);
-        audioSource = GetComponent<AudioSource>();
     }
 
 
@@ -51,10 +51,17 @@ public class PlayerAttack : MonoBehaviour
 
         if (context.performed && player.attackTimer <= 0)
         {
+            audioSource = GetComponent<AudioSource>();
             player.attackTimer = player.attackCooldown;
             Quaternion rotation = transform.rotation;
             anim.SetTrigger("attack");
             Instantiate(AttackPrefab, attackPoint.position, rotation);
+
+            if (attackSound != null && audioSource != null)
+            {
+                audioSource.PlayOneShot(attackSound);
+            }
+
             Invoke(nameof(DoDamage), 0.1f);
         }
     }
@@ -86,11 +93,13 @@ public class PlayerAttack : MonoBehaviour
                 anim.SetTrigger("isShoot");
                 bowObject.GetComponent<Bow>()?.StartShoot();
 
-                Debug.Log("Player attacked!");
-                if (attackSound != null && audioSource != null)
+                audioSource = GetComponent<AudioSource>();
+                if (bowShootSound != null && audioSource != null)
                 {
-                    audioSource.PlayOneShot(attackSound);
+                    audioSource.PlayOneShot(bowShootSound);
                 }
+
+                Debug.Log("Player attacked!");
 
                 Invoke(nameof(DoDamage), 0.2f);
             }

@@ -32,6 +32,16 @@ public class GameManager : MonoBehaviour
     {
         reachedEndCheckpoint = true;
 
+        GameObject musicObj = GameObject.Find("Music");
+        if (musicObj != null)
+        {
+            AudioSource musicAudio = musicObj.GetComponent<AudioSource>();
+            if (musicAudio != null)
+            {
+                musicAudio.Stop();
+            }
+        }
+
         if (victorySound != null && sfxAudioSource != null)
         {
             sfxAudioSource.PlayOneShot(victorySound);

@@ -39,13 +39,18 @@ public class BossController : Boss, IDamageable
     public float meleeCooldown = 3f;
     private float meleeTimer;
 
+    [Header("Sound Settings")]
+    public AudioClip fireballShootSound;
+    private AudioSource audioSource;
+
     public GameObject checkpointPrefab;
     private void Awake()
     {
         anim = GetComponent<Animator>();
         currentSegment = totalSegments;
         attackTimer = attackCooldown;
-    
+        audioSource = GetComponent<AudioSource>();
+
         if (healthBarUI != null)
         {
             healthBarUI.Setup(totalSegments);
@@ -212,6 +217,11 @@ public class BossController : Boss, IDamageable
 
     void ShootFireball()
     {
+        if (fireballShootSound != null && audioSource != null)
+        {
+            audioSource.PlayOneShot(fireballShootSound);
+        }
+
         GameObject fb = Instantiate(fireballPrefab, firePoint.position, Quaternion.identity);
         //fb.GetComponent<Fireball>().target = player.gameObject;
         Fireball fireballScript = fb.GetComponent<Fireball>();
