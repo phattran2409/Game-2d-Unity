@@ -17,6 +17,7 @@ public class Health : MonoBehaviour
     [Header("Audio")]
     public AudioClip hurtSound;
     public AudioClip gameOverSound;
+    public AudioClip HealedSound;
 
     private void Awake()
     {
@@ -32,6 +33,10 @@ public class Health : MonoBehaviour
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, startingHealth);
         if (currentHealth > 0 && anim != null)
         {
+            if (playerController != null && HealedSound != null && playerController.SfxAudioSource != null)
+            {
+                playerController.SfxAudioSource.PlayOneShot(HealedSound);
+            }
             anim.SetTrigger("Heal");    
         }
     }
