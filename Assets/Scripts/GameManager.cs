@@ -47,8 +47,21 @@ public class GameManager : MonoBehaviour
             sfxAudioSource.PlayOneShot(victorySound);
         }
 
+
+
         Time.timeScale = 0f; 
         instancePrefab = Instantiate(completePanel, FindObjectOfType<Canvas>().transform);
+
+
+        PlayerController player = FindObjectOfType<PlayerController>();
+        if (player != null)
+        {
+            CompletePanelUI panelUI = instancePrefab.GetComponent<CompletePanelUI>();
+            if (panelUI != null)
+            {
+                panelUI.SetStats(player.cherries, player.gems);
+            }
+        }
         Debug.Log("End checkpoint reached!");
     }
 }
