@@ -19,7 +19,7 @@ namespace Assets.Scripts.Checkpoint
         [Header("Input action ")]
         public InputActionAsset inputActions; // <-- kéo GameInput vào
         private InputAction nextDialogueAction;
-
+        public GameObject Message;
         private void OnEnable()
         {
             nextDialogueAction = inputActions.FindAction("UI/NextDialog");
@@ -45,6 +45,7 @@ namespace Assets.Scripts.Checkpoint
         {
             if (isDialogActive)
             {
+             
                 ShowNextMessage();
             }
         }   
@@ -53,6 +54,7 @@ namespace Assets.Scripts.Checkpoint
         {
             if (!triggered && other.CompareTag("Player"))
             {
+                Message.SetActive(true); // Kích hoạt GameObject chứa thông điệp
                 triggered = true;
                 currentMessage = 0;
                 ShowNextMessage();
@@ -71,6 +73,7 @@ namespace Assets.Scripts.Checkpoint
             else
             {
                 isDialogActive = false;
+                Message.SetActive(false); // Ẩn GameObject chứa thông điệp
             }
         }
     }
