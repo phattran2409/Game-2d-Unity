@@ -116776,9 +116776,13 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1826032940}
     - target: {fileID: 452858669886065188, guid: fce495a76232f08479924a8435745a86, type: 3}
+      propertyPath: sfxMixerGroup
+      value: 
+      objectReference: {fileID: -990675111356331038, guid: 5584cb17bc49c114d90e69d4c7a9839f, type: 2}
+    - target: {fileID: 452858669886065188, guid: fce495a76232f08479924a8435745a86, type: 3}
       propertyPath: stepLoopSound
       value: 
-      objectReference: {fileID: 8300000, guid: 72463f6248a42074aa982ffbbb3d0875, type: 3}
+      objectReference: {fileID: 8300000, guid: bc52959cab8bdfa429941d11eaa98ec3, type: 3}
     - target: {fileID: 452858669886065188, guid: fce495a76232f08479924a8435745a86, type: 3}
       propertyPath: knockBackForce
       value: 10
@@ -117298,7 +117302,7 @@ AudioSource:
   m_GameObject: {fileID: 863188905}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 7181176766679230787, guid: 5584cb17bc49c114d90e69d4c7a9839f, type: 2}
   m_audioClip: {fileID: 8300000, guid: 6f6602b2db7a1c147a924ccaa6e0fd37, type: 3}
   m_Resource: {fileID: 8300000, guid: 6f6602b2db7a1c147a924ccaa6e0fd37, type: 3}
   m_PlayOnAwake: 1
@@ -119383,7 +119387,7 @@ AudioSource:
   m_GameObject: {fileID: 1225567411}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -990675111356331038, guid: 5584cb17bc49c114d90e69d4c7a9839f, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 6a646faa2b060c94f805d1260a69c689, type: 3}
   m_PlayOnAwake: 0

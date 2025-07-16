@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine.InputSystem;
 using Unity.VisualScripting;
+using UnityEngine.Audio;
 
 public class PlayerController : MonoBehaviour
 {
@@ -52,7 +53,8 @@ public class PlayerController : MonoBehaviour
     public AudioClip collectFruitSound; 
     public AudioClip collectGemSound;
     private AudioSource stepAudioSource;  
-    private AudioSource sfxAudioSource;   
+    private AudioSource sfxAudioSource;
+    public AudioMixerGroup sfxMixerGroup;
 
     void Start()
     {
@@ -80,6 +82,16 @@ public class PlayerController : MonoBehaviour
         }
 
         stepAudioSource.loop = true;
+
+        if (stepLoopSound != null)
+            stepAudioSource.clip = stepLoopSound;
+
+        if (sfxMixerGroup != null)
+        {
+            sfxAudioSource.outputAudioMixerGroup = sfxMixerGroup;
+            stepAudioSource.outputAudioMixerGroup = sfxMixerGroup;
+        }
+
     }
 
     void Update()
@@ -124,6 +136,30 @@ public class PlayerController : MonoBehaviour
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
             jumpBufferCounter = 0;
+        }
+
+        if (grounded && Mathf.Abs(horizontal) > 0.1f)
+        {
+            if (!stepAudioSource.isPlaying)
+            {
+                stepAudioSource.Play();
+            }
+        }
+        else
+        {
+            if (stepAudioSource.isPlaying)
+            {
+                stepAudioSource.Pause();
+            }
+        }
+
+        if (health.Dead)
+        {
+            if (stepAudioSource != null && stepAudioSource.isPlaying)
+            {
+                stepAudioSource.Stop();
+            }
+            return;
         }
     }
 
