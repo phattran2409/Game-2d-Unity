@@ -10,14 +10,10 @@ public class EnemyMovement : MonoBehaviour
     public int damage = 1;
 
     [Header("Chase Settings")]
-    [SerializeField] public float chaseSpeed = 3.5f;
+    [SerializeField] public float chaseSpeed = 2f;
     [SerializeField] public float detectRange = 5f;
-
-      
-
     //[SerializeField] private Transform player;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
 
     void Awake()
     {
@@ -56,8 +52,10 @@ public class EnemyMovement : MonoBehaviour
 
         float distanceToPlayer = Vector2.Distance(transform.position, player.position);
         isChasing = distanceToPlayer <  detectRange;
-    }
-    
+   }
+
+
+ 
 
 
 }
