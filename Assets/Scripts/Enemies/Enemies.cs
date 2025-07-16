@@ -9,22 +9,21 @@ public class Enemies : MonoBehaviour
     //public bear bearScript;
     //public EnemyBatController batScript; 
     // handle attacked of enemy 
-	private bool hasAttacked = false;
+	public bool hasAttacked = false;
     //public Transform pointA;
     //public Transform pointB;	
-    private bool isKnockbacking = false;
+    public bool isKnockbacking = false;
 
     [Header("Attack Cooldown")]
 	public float attackCooldown = 2f;
     public bool DetectPlayer(Transform player  , Transform enemy , float attackRange , bool isDead)
 	{
 
-		
 		float distance = Vector2.Distance(enemy.position, player.position);
-		if (distance < attackRange && !hasAttacked && isDead == false)
+        if (distance < attackRange && isDead == false)
 		{
 			
-			Invoke(nameof(ResetAttack) , 2f);
+			//Invoke(nameof(ResetAttack) , 2f);
 			return true; 
 			
 		}

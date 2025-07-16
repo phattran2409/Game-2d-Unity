@@ -24,7 +24,7 @@ public class EnemyBatController : Enemies , IDamageable
 									   // Detect player 
 	public Transform player;
     public GameObject attackEffectPrefab;
-    public float attackRange = 2f;
+    public float attackRange = 1f;
 
     //private bool hasAttacked = false;
     public Transform attackPos;
@@ -54,7 +54,7 @@ public class EnemyBatController : Enemies , IDamageable
 
     void Update()
     {
-        if (isDead) return; // Nếu Bat đã chết thì không thực hiện hành động nào khác   
+        if (isDead ||enemies.isKnockbacking) return; // Nếu Bat đã chết thì không thực hiện hành động nào khác   
 
 		elapsedTime += Time.deltaTime * speed;
 
@@ -75,18 +75,12 @@ public class EnemyBatController : Enemies , IDamageable
         else if (deltaX < -0.01f)
             spriteRenderer.flipX = true;  // bay sang trái
 
-        //float distance = Vector2.Distance(transform.position, player.position);
-        //if (distance < attackRange && !hasAttacked && health.Dead == false)
-        //{
-        //    Attack();   
-        //    hasAttacked = true;
-        //    Invoke(nameof(ResetAttack), 2f); // Thời gian hồi
-        //}
-        attackerTimer -= Time.deltaTime;    
-        if (DetectPlayer() && attackerTimer <= 0)
-        {
+        attackerTimer -= Time.deltaTime;
+        bool  detectPlayer = DetectPlayer(); // Kiểm tra xem có phát hiện người chơi hay không  
+        if (detectPlayer && attackerTimer <= 0)
+        { 
             Attack();
-            //hasAttacked = true; // Đánh dấu đã tấn công
+            enemies.hasAttacked = true;
             attackerTimer = enemies.attackCooldown; // Đặt lại thời gian tấn công
         }
 
@@ -95,6 +89,7 @@ public class EnemyBatController : Enemies , IDamageable
 
    public void Attack()
     {
+        Debug.Log("Attack");
         Vector2 dir = (player.position - attackPos.position).normalized;
         float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
         Quaternion rotation = Quaternion.Euler(0, 0, angle);

@@ -149,4 +149,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collectEffect: {fileID: 5437947267952641760, guid: d615a2a459f376a46ad6cbff3c11bfaf, type: 3}
   playerArrowInventory: {fileID: 0}
-  maxArrowAmout: 1
+  maxArrowAmout: 5

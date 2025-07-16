@@ -70,7 +70,7 @@ namespace Assets.Scripts.Checkpoint
                 typewriter.ShowText(messages[currentMessage]);
                 currentMessage++;
             }
-            else
+            else 
             {
                 isDialogActive = false;
                 Message.SetActive(false); // Ẩn GameObject chứa thông điệp
